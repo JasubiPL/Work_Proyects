@@ -9,7 +9,8 @@ const btnCloseMenu = document.getElementById("btn_close_menu")
 const principalMenu = document.getElementById("principal_menu")
 const costumersSection = document.getElementById("costumers")
 const portfolioSection = document.getElementById("porfolio_section");
-const aboutUsCard = document.querySelectorAll(".card")
+const brandingSection = document.getElementById("branding_section")
+const aboutUsCard = document.querySelector(".about_us_center")
 
 
 //EVENTS LISTENER
@@ -102,6 +103,5 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(portfolioSection);
 observer.observe(costumersSection);
-aboutUsCard.forEach(card =>{
-  observer.observe(card);
-})
+observer.observe(aboutUsCard);
+observer.observe(brandingSection);

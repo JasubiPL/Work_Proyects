@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles/animations.css">
   <link rel="stylesheet" href="styles/globals.css">
   <link rel="stylesheet" href="styles/index.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <title>Disruptive Media</title>
 </head>
 <body>
@@ -19,9 +21,10 @@
             <img id="btn_close_menu" class="btn_close_menu" src="./img/icons/close.png" alt="">
           </li>
           <li class="menu_list item_list_1 select"><a href="#home">Inicio</a></li>
+          <li class="menu_list item_list_2 "><a href="#costumers">Clientes</a></li>
           <li class="menu_list item_list_2 "><a href="#about_us">Nosotros</a></li>
-          <li class="menu_list item_list_3"><a href="#portfolio">Portafolio</a></li>
-          <li class="menu_list item_list_4"><a>contacto</a></li>
+          <li class="menu_list item_list_3"><a href="#branding_section">Portafolio</a></li>
+          <li class="menu_list item_list_4"><a href="">Contacto</a></li>
           <section class="social_network">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="512" height="512">
               <g>
@@ -59,22 +62,30 @@
           con una segmentación bien definida y largos tiempos de exposición con formatos publicitarios estratégicamente ubicados y diseñados.</p>
       </div>
     </section>
-    <section id="render_zone" class="render_zone"></section>
+    <section id="render_zone" class="render_zone">
+      <img src="./img/header_image.webp" alt="Marketing logo">
+    </section>
   </header>
   <main  class="main">
     <section id="costumers" class="customers">
       <h2>Clientes</h2>
+      <p>Más de <span>+100 empresas</span> confian en nosotros</p>
       <div class="customers_logo">
-        <img src="./img/clientes/lameal.png" alt="">
-        <img src="./img/clientes/autovias.png" alt="">
-        <img src="./img/clientes/costaline.webp" alt="">
-        <img src="./img/clientes/marca-etn.png" alt="">
-        <img src="./img/clientes/PEGASSO.jpg" alt="">
-        <img src="./img/clientes/Logo_Futura.png" alt="">
-        <img src="./img/clientes/logo-autobuses-alegra-b.png" alt="">
-        <img src="./img/clientes/surdejalisco-logo.png" alt="">
-        <img src="./img/clientes/suburbano.webp" alt="">
-        <img src="./img/clientes/turistar-ejecutivo.webp" alt="">
+        <img src="./img/clientes/Logo Alegra.svg" alt="">
+        <img src="./img/clientes/Logo Amealcenses.svg" alt="">
+        <img src="./img/clientes/Logo AMS.svg" alt="">
+        <img src="./img/clientes/Logo Autobuses Zinacantepec.svg" alt="">
+        <img src="./img/clientes/Logo Autovias La Linea.svg" alt="">
+        <img src="./img/clientes/Logo ETN Turistar.svg" alt="">
+        <img src="./img/clientes/Logo Ferrocarriles Suburbanos.svg" alt="">
+        <img src="./img/clientes/Logo Futura Plus.svg" alt="">
+        <img src="./img/clientes/Logo Halcones.svg" alt="">
+        <img src="./img/clientes/Logo Horizonte Nuevo.svg" alt="">
+        <img src="./img/clientes/Logo Pegasso.svg" alt="">
+        <img src="./img/clientes/Logo Rapidos.svg" alt="">
+        <img src="./img/clientes/Logo Sur de Jalisco.svg" alt="">
+        <img src="./img/clientes/Logo Transportes Atlacomulco.svg" alt="">
+        <img src="./img/clientes/Logo Viajero.svg" alt="">
       </div>
     </section>
     <section id="about_us" class="about_us">
@@ -103,6 +114,29 @@
         </div>
       </section>
     </section>
+
+    <section id="branding_section" class="branding">
+      <article class="branding_info">
+        <div class="branding_info_center">
+          <h2>Tu marca a la vista de todos</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ea non nam illum, eaque nemo velit nulla accusantium eligendi nihil iusto accusamus mollitia vero eius iure provident doloribus voluptatem. Nostrum!</p>
+        </div>
+      </article>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/sapling_banner/Imagen Banner Escalera Sotano.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/sapling_banner/Imagen Vallas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./img/sapling_banner/Imagen Mupi Columna.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="porfolio_section" class="portfolio">
 
       <div class="galery_item">
@@ -176,9 +210,8 @@
       
     </section>
   </main> 
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="./js/main.js" ></script>
-  <script src="js/three.js"></script>
-  <script src="js/3dScene.js"></script>
 </body>
 </html>
