@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Varela+Round&display=swap');
+
+:root{
+  --primary-color: #004cfa;
+  --secundary-color: #10B0F6;
+  --gradient: linear-gradient(to right top, #004cfa, #0064ff, #0079ff, #008bff, #009cff, #009cff, #009cff, #009cff, #008bff, #0079ff, #0064ff, #004cfa);
+  --secundary-color-opacity: rgb(16, 176, 246, .7);
+  --primary-color-opacity: rgba(0, 76, 250, .7);
+}
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3{
+  font-weight: 300;
+}
