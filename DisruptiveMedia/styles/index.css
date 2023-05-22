@@ -334,18 +334,21 @@
   border-radius: 10px;
   padding: 25px;
   box-shadow: 1px 1px 12px 0px rgba(0,0,0, 0.35);
-  transition: all .2s;
+  transition: all 1s;
+  opacity: 0;
 }
 .card:hover{
-  transform: translateY(-50px);
+  transform: translateY(-15px);
 }
 .card h3{
   font-size: 28px;
+  font-weight: bold;
 }
 .card svg{
   width: 100px;
   height: 100px;
   fill: var(--primary-color);
+  animation: rotate 3s infinite linear;
 }
 
 
@@ -360,6 +363,14 @@
     min-height: auto;
     display: flex;
     flex-direction: column;
+  }
+  .header::after{
+    bottom: -350px;
+
+  }
+
+  .render_zone{
+    transform: translateY(-90px);
   }
 
   .header_info_center{
@@ -435,6 +446,9 @@
 }
 
 @media screen and (max-width:540px){
+  .header p{
+    font-size: 16px;
+  }
   .social_network{
     display: flex;
   }
@@ -464,6 +478,12 @@
   .galery_info h3, .galery_info_2 h3, .galery_title{
     font-family: var(--titles-font);
     font-size: 5vw;
+  }
+  .about_us{
+    padding: 50px 10px;
+  }
+  .about_us::after{
+    top: -380px;
   }
 }
 
