@@ -34,7 +34,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 80px;
 }
 
 .header_info{
@@ -42,7 +41,6 @@
   justify-content: center;
   gap: 30px;
   width: 70%;
-  transform: translateY(-100px);
   color: #fff;
   font-size: 18px;
   animation: left_to_right 1s;
@@ -140,9 +138,13 @@
   animation: down_to_up_paused 3s;
 }
 
+.item_list_5{
+  animation: up_to_down_pused 3.5s;
+}
+
 .search img{
   height: 20px;
-  animation: up_to_down_pused 3.5s;
+  animation: down_to_up_paused 4s;
 }
 
 .search{
@@ -276,8 +278,9 @@
 }
 
 .customers h2{
-  font-size: 3vw;
+  font-size: 36px;
   padding:  20px;
+  font-weight: bold;
   font-family: var(--titles-font);
   color: var(--primary-color);
 }
@@ -387,7 +390,7 @@
   height: 100%;
   z-index: 1;
   display: grid;
-  place-content: center;
+  place-items: center;
 }
 
 .branding_info_center{
@@ -406,9 +409,13 @@
 /*---------- Digital --------------*/
 .digital{
   width: 100%;
-  min-height: calc(80vh);
+  padding: 100px 20px;
   position: relative;
   overflow: hidden;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: all 1s;
 }
 
 .digital::after{
@@ -422,7 +429,107 @@
   top: -334px;
 }
 
+.digital_center{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 30px;
+  row-gap: 150px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.digital_center h2{
+  width: 100%;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 36px;
+
+}
+
+.digital_card{
+  width: 100%;
+  position: relative;
+  max-width: 320px;
+  padding: 80px 20px 20px 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: flex-end;
+  box-shadow: 1px 1px 12px 0px rgba(0,0,0, 0.35);
+
+}
+
+.digital_card h3{
+  color: var(--secundary-color);
+  font-size: 24px;
+}
+
+.digital_card_counter{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 48px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -50px;
+  left: 40px;
+}
+
+.digital_card_counter span{
+  width: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.digital_card_counter svg{
+  height: 50px;
+  width: 100%;
+  fill: rgb(2, 192, 2);
+  margin-right: 10px;
+  animation: up_infinite infinite 1.2s ;
+}
+
+.digital_card img{
+  position: absolute;
+  top: -130px;
+  left: calc(50% - 100px);
+}
+
 /*-------------------- Start Responsive ----------------------------*/
+
+@media screen and (max-width:1024px) {
+  .header_info{
+    width: 90%;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .header_info h2{
+    font-size: 36px;
+  }
+
+  .customers{
+    padding: 20px;
+  }
+
+  .customers h2{
+    font-size: 36px;
+  }
+
+  .customers img{
+    height: 180px;
+  }
+
+  .about_us{
+    padding: 100px 20px;
+  }
+}
+
 @media screen and (max-width:820px) {
   .nav{
     overflow: initial;
@@ -433,24 +540,24 @@
     min-height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 70px
   }
+
   .header::after{
     bottom: -350px;
-
-  }
-
-  .render_zone{
-    transform: translateY(-90px);
-  }
-
-  .header_info_center{
-    margin-top: 140px;
-    height: auto;
   }
 
   .header_info{
-    display: flex;
-    flex-direction: column;
+    padding: 30px 20px;
+    font-size: 16px;
+  } 
+  .render_zone{
+    overflow: hidden;
+    height: calc(70vw - 200px);
+  }
+  .render_zone img{
+    width: 70%;
+    transform: translateY(-50px)
   }
 
   .principal_menu{
@@ -470,6 +577,9 @@
     font-size: 24px;
 
   }
+  .social_network{
+    display: flex;
+  }
   .item_list_1, .item_list_2, .item_list_3, .item_list_4{
     animation: none;
   }
@@ -485,6 +595,22 @@
   .search img{
     animation: up_to_down_pused 1.5s;
     height: 30px;
+  }
+  /*----------------- brand Slide -------------------*/
+  .branding{
+    height: initial;
+  }
+
+  /*------------ Digital ------------------*/
+  .digital{
+    padding: 50px 20px;
+  }
+  .digital::after{
+    top: -370px;
+  }
+
+  .digital h2{
+    margin-bottom: 0px;
   }
   /*-----------------porfolio---------------*/
   .galery_item{
@@ -503,44 +629,63 @@
     background-color: rgba(255, 255, 255, .8);
     opacity: 1;
   }
-  /*---------Costumers--------*/
-
-  .customers_logo img{
-    height: 70px;
-  }
-
-  .customers h2{
-    font-size: 32px;
-  }
-
 }
 
 @media screen and (max-width:540px){
-  .header p{
-    font-size: 16px;
-  }
-  .social_network{
-    display: flex;
-  }
   .menu_container{
     width: 100%;
     justify-content: flex-end;
   }
 
+  .header{
+    min-height: 100vh;
+  }
+
   .header_info{
     width: 100%;
     padding: 10px;
+    font-size: 14px;
   }
 
   .header_info h2{
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  .render_zone canvas{
-    height: 200px;
-    width: 200px;
+  .render_zone{
+    height: auto;
   }
-  /*------------Main----------------*/
+  .render_zone img{
+    width: 100%;
+  }
+  /*-------- costumers -------------*/
+  .customers{
+    padding: 10px;
+  }
+  .customers h2{
+    font-size: 28px;
+    padding: 0px;
+  }
+  .customers p{
+    font-size: 18px;
+  }
+
+  .customers_logo img{
+    width: 40%;
+    height: auto;
+  }
+  /*-------- about us -------------*/
+  .about_us h2{
+    font-size: 28px;
+  }
+  /*-------- Branding -------------*/
+
+  .branding_info h2{
+    font-size: 24px;
+  }
+
+  .branding_info p{
+    font-size: 14px;
+  }
   .portfolio{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -554,6 +699,10 @@
   }
   .about_us::after{
     top: -380px;
+  }
+  /*---------- digital --------------*/
+  .digital_center h2{
+    font-size: 28px;
   }
 }
 

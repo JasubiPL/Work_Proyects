@@ -10,8 +10,12 @@ const principalMenu = document.getElementById("principal_menu")
 const costumersSection = document.getElementById("costumers")
 const portfolioSection = document.getElementById("porfolio_section");
 const brandingSection = document.getElementById("branding_section")
+const digitalSection = document.getElementById("digital_section")
 const aboutUsCard = document.querySelector(".about_us_center")
-
+const counterNumber1 = document.querySelector(".counter_number_1")
+const counterNumber2 = document.querySelector(".counter_number_2")
+const counterNumber3 = document.querySelector(".counter_number_3")
+const counterNumber4 = document.querySelector(".counter_number_4")
 
 //EVENTS LISTENER
 btnSearch.addEventListener('click', showSearch)
@@ -85,7 +89,7 @@ function hiddenMenu(){
 
 
 
-
+//Lazy load
 const observerOptions = {
   root: null,
   threshold: .5,
@@ -101,7 +105,28 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 }, observerOptions);
 
+
+//Counter efect
+function counterStart(){
+  initialNumber = 0;
+
+  setInterval(() =>{
+    if(initialNumber >=6){
+      initialNumber = 0
+    }
+    initialNumber++
+
+    counterNumber1.innerText = initialNumber + 1
+    counterNumber2.innerText = initialNumber
+    counterNumber3.innerText = initialNumber + 2
+    counterNumber4.innerText = initialNumber + 3
+  },50)
+}
+
+//exectute functions
 observer.observe(portfolioSection);
 observer.observe(costumersSection);
 observer.observe(aboutUsCard);
 observer.observe(brandingSection);
+observer.observe(digitalSection);
+counterStart()
