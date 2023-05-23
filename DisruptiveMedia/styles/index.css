@@ -124,6 +124,15 @@
   font-family: var(--titles-font);
 }
 
+.menu_mobile_title{
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 24px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 .item_list_1{
   animation: up_to_down_pused 1.5s;
 }
@@ -163,15 +172,34 @@
   transition: all .5s;
 }
 
-.btn_menu, .btn_close_menu{
+.btn_menu{
   height: 25px;
   display: none;
 }
 
-.social_network{
-  display: flex;
-  gap: 25px;
+.btn_close_menu{
   display: none;
+  transform: translateX(45vw) translateY(40px);
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: var(--secundary-color);
+  backdrop-filter: blur(25px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_close_menu svg{
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+}
+
+.social_network{
+  display: none;
+  gap: 25px;
   justify-content: center;
   width: 100%;
   margin-top: 50px;
@@ -183,92 +211,7 @@
   width: 30px;
   cursor: pointer;
 }
-
-/*------------------- Main ------------------------------*/
-
-
-.portfolio{
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  opacity: 0;
-  transition: 1.2s ease all;
-}
-
-.galery_item, .galery_item_2{
-  display: flex;
-  width: 100%;
-  position: relative;
-  aspect-ratio: 1 / 1;
-}
-
-.galery_item img, .galery_item_2 img{
-  width: 100%;
-  object-fit: cover;
-  transition: all .5s;
-}
-
-.galery_info:hover{
-  opacity: 0;
-}
-
-.galery_info_2:hover{
-  opacity: 1;
-}
-
-.galery_info_2{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-  display: grid;
-  place-content: center;
-  background-color: rgb(255, 255, 255, .9);
-  text-align: center;
-  gap: 20px;
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: .5s;
-  opacity: 0;
-}
-
-.galery_info{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-  display: grid;
-  place-content: center;
-  background-image: var(--gradient);
-  text-align: center;
-  gap: 20px;
-  color: #fff;
-  cursor: pointer;
-  transition: .5s;
-}
-
-.galery_title{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-  display: grid;
-  place-content: center;
-  background-image: var(--gradient);
-  text-align: center;
-  gap: 20px;
-  color: #fff;
-  transition: .5s;
-  font-size: 4vw;
-}
-
+/*---------- Costumers ---------*/
 .customers{
   width: 100%;
   display: grid;
@@ -342,7 +285,7 @@
   max-width: 1200px;
   justify-content: space-evenly;
   opacity: 0;
-  transition: 1s;
+  transition: 1.2s ease all;
 }
 .card{
   width: 100%;
@@ -378,7 +321,7 @@
   overflow: hidden;
   position: relative;
   opacity: 0;
-  transition: all 1s;
+  transition: 1.2s ease all;
 }
 
 .branding_info{
@@ -415,7 +358,7 @@
   display: grid;
   place-items: center;
   opacity: 0;
-  transition: all 1s;
+  transition: 1.2s ease all;
 }
 
 .digital::after{
@@ -500,7 +443,211 @@
   left: calc(50% - 100px);
 }
 
-/*-------------------- Start Responsive ----------------------------*/
+/*---------- More servises ----------*/
+.more_options{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 0;
+  transition: 1.2s ease all;
+  overflow: hidden;
+}
+
+.more_options::after{
+  position: absolute;
+  content: "";
+  width: 120vw;
+  height: 400px;
+  background-color: #fff;
+  transform: rotateZ(3deg);
+  top: -340px;
+}
+
+
+.galery_item{
+  display: flex;
+  width: 50%;
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+.galery_item img{
+  width: 100%;
+  object-fit: cover;
+  transition: all .5s;
+}
+
+.galery_info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0, 0.8);
+  text-align: center;
+  gap: 20px;
+  color: #fff;
+  transition: .5s;
+}
+
+.galery_info p{
+  width: 100%;
+  max-width: 70%;
+}
+
+.galery_info h3{
+  font-size: 36px;
+  color: var(--secundary-color);
+  font-weight: bold;
+}
+
+/*---------------contact-----------------*/
+.contact{
+  width: 100%;
+  background-image: url("../img/contact_background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+  opacity: 0;
+  transition: 1.2s ease all;
+}
+
+.contact_center{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 1px 1px 12px 0px rgba(0,0,0, .7);
+  background-color: rgba(255,255,255, .5);
+  backdrop-filter: blur(25px);
+}
+
+.contact_info{
+  width: 40%;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+
+}
+
+.contact_info_image{
+  width: 80%;
+}
+.contact_info_logo{
+  height: 70px;
+}
+
+.contact_social_network{
+  display: flex;
+  gap: 20px;
+}
+
+.contact_social_network svg{
+  width: 30px;
+  height: 30px;
+
+}
+
+.contact_info p strong{
+  color: var(--primary-color);
+}
+.contact_form{
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 20px;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.contact_form h2{
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact_input_short, .contact_input_complete{
+  outline: none;
+  border:2px solid transparent;
+  background-color: #fff;
+  padding: 10px;
+  color: #101010;
+  border-radius: 50px;
+}
+
+.contact_input_short:focus, 
+.contact_input_complete:focus, 
+.contact_form textarea:focus{
+  border:2px solid var(--primary-color);
+}
+
+.contact_input_short{
+  width: 48%;
+}
+.contact_input_complete{
+  width: 100%;
+}
+.form_btn svg{
+  height: 20px;
+  width: 20px;
+  fill: #fff;
+}
+
+.contact_form textarea{
+  width: 100%;
+  height: 300px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  padding: 10px;
+  color: #101010;
+  border-radius: 10px;
+}
+
+.form_btn{
+  gap: 15px;
+  display: flex;
+  border: none;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  transition: all .2s;
+}
+
+.form_btn p{
+  font-size: 18px;
+  margin: 0;
+}
+
+.form_btn:hover{
+  transform: scale(1.05);
+}
+
+.form_btn:active{
+  transform: scale(0.95);
+}
+/* <==================================================== Start Responsive =====================================================> */
 
 @media screen and (max-width:1024px) {
   .header_info{
@@ -527,6 +674,18 @@
 
   .about_us{
     padding: 100px 20px;
+  }
+
+  .galery_item{
+    aspect-ratio: 1/1;
+    font-size: 14px;
+  }
+  .galery_info h3{
+    font-size: 24px;
+  }
+
+  .contact_input_short{
+    width: 47%;
   }
 }
 
@@ -562,29 +721,50 @@
 
   .principal_menu{
     position: fixed;
-    background-color: var(--primary-color);
+    background-color: var(--secundary-color);
+    padding: 20px;
     top:0;
-    right: 0;
-    width: 0vw;
+    left: 0;
+    width: 50vw;
     height: 100vh;
     z-index: 2;
     flex-direction: column;
-    padding: 0;
+    padding: 40px 10px;
     align-items: flex-start;
+    transform: translateX(-100vw);
+
   }
-  .principal_menu li a{
+
+  .menu_mobile_title{
+    display: flex;
+    color: var(--primary-color);
+    margin-left: 20px;
+    font-size: 32px;
+    border-bottom: 2px solid #fff;
+    width: 80%;
+  }
+  .principal_menu li{
+    margin-left: 20px;
+  }
+   .principal_menu li a{
     color: #fff;
     font-size: 24px;
+    margin-left: 20px;
 
   }
   .social_network{
     display: flex;
+    fill: var(--primary-color);
   }
   .item_list_1, .item_list_2, .item_list_3, .item_list_4{
     animation: none;
   }
   .select::before{
-    opacity: 0;
+    content: "⟫";
+    font-size: 24px;
+    top:-3px;
+    color: #fff;
+    
   }
   .btn_menu, .btn_close_menu{
     display: flex;
@@ -612,26 +792,29 @@
   .digital h2{
     margin-bottom: 0px;
   }
-  /*-----------------porfolio---------------*/
-  .galery_item{
-    width: 100%;
-    height: 100%;
+  /*-----------------contact---------------*/
+  .contact_form textarea{
+    height: 200px;
   }
-  .portfolio{
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .galery_info{
-    background-color: var(--primary-color-opacity);
-    opacity: 1;
+  .contact_form h2{
+    font-size: 24px;
   }
 
-  .galery_info_2{
-    background-color: rgba(255, 255, 255, .8);
-    opacity: 1;
+  .contact_input_short, 
+  .contact_input_complete,
+  .contact_form textarea{
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width:540px){
+
+  .principal_menu{
+    width: 80vw;
+  }
+  .btn_close_menu{
+    transform: translateX(68vw) translateY(40px);
+  }
   .menu_container{
     width: 100%;
     justify-content: flex-end;
@@ -704,5 +887,51 @@
   .digital_center h2{
     font-size: 28px;
   }
+  /*-------- more options --------*/
+
+  .more_options{
+    padding-top: 50px;
+  }
+  .galery_item{
+    width: 100%;
+  }
+  .galery_info{
+    padding: 10px;
+  }
+  .galery_info p{
+    max-width: 90%;
+  }
+  /*-------- contact ------------*/
+  .contact{
+    padding: 10px;
+  }
+  .contact_center{
+    flex-direction: column;
+    background-color: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+  .contact_info, .contact_form{
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact_form{
+    gap: 15px;
+    margin-top: 30px;
+    background-color: rgba(255,255,255, .5);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+  }
+
+  .contact_input_short{
+    width: 100%;
+  }
+
+  .form_btn{
+    width: 100%;
+    justify-content: center;
+  }
+
 }
 

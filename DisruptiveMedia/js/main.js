@@ -12,6 +12,7 @@ const portfolioSection = document.getElementById("porfolio_section");
 const brandingSection = document.getElementById("branding_section")
 const digitalSection = document.getElementById("digital_section")
 const aboutUsCard = document.querySelector(".about_us_center")
+const contactSection = document.getElementById("contact")
 const counterNumber1 = document.querySelector(".counter_number_1")
 const counterNumber2 = document.querySelector(".counter_number_2")
 const counterNumber3 = document.querySelector(".counter_number_3")
@@ -41,14 +42,14 @@ MenuItems.forEach((item) => {
 function showSearch(){
   if(window.innerWidth <= 500){
     if(!switchSearch){
-      search.style.backgroundColor = "#fff"
-      search.style.padding = "10px"
-      search.style.width = "100%"
+      search.style.border = "1px solid #004cfa"
+      search.style.padding = "5px 10px"
+      search.style.width = "80%"
       inputSearch.style.width = "100%"
       logo.style.display = "none"
       switchSearch = true
     }else{
-      search.style.background = "none"
+      search.style.border = "none"
       search.style.padding = "0"
       inputSearch.style.width = "0px"
       logo.style.display = "block"
@@ -58,7 +59,7 @@ function showSearch(){
   }else{
     if(!switchSearch){
       search.style.border = "1px solid #004cfa"
-      search.style.padding = "10px 20px"
+      search.style.padding = "5px 10px"
       inputSearch.style.width = "auto"
       switchSearch = true
     }else{
@@ -74,17 +75,14 @@ function showMenu(){
   const screenWidth = window.innerWidth
 
   if(screenWidth <= 820 && screenWidth >= 450){
-    principalMenu.style.width = "50vw"
-    principalMenu.style.padding = "20px"
+    principalMenu.style.transform = "translateX(0vw)"
   }else{
-    principalMenu.style.width = "100vw"
-    principalMenu.style.padding = "20px"
+    principalMenu.style.transform = "translateX(0vw)"
   }
 }
 
 function hiddenMenu(){
-  principalMenu.style.width = "0px"
-  principalMenu.style.padding = "0px"
+  principalMenu.style.transform = "translateX(-100vw)"
 }
 
 
@@ -129,4 +127,5 @@ observer.observe(costumersSection);
 observer.observe(aboutUsCard);
 observer.observe(brandingSection);
 observer.observe(digitalSection);
+observer.observe(contactSection);
 counterStart()
