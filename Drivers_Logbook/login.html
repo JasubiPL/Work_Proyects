@@ -9,12 +9,15 @@
 </head>
 <body>
 
-  <main class="main">
+  <main class="main screen">
+    <!---------------------- Start Header ---------------------->
     <header class="login-header">
       <section class="btn-return">
-        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512">
-          <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
-        </svg>
+        <a href="./index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="512" height="512">
+            <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
+          </svg>
+        </a>
       </section>
       <section class="title-header">
         <p>Iniciar sesión</p>
@@ -25,6 +28,20 @@
         </svg>
       </section>
     </header>
+    
+    <!---------------------- Start Login Form ---------------------->
+    <form class="login-form">
+      <input type="text" id="username-input" class="login-input" placeholder="USEARIO">
+      <input type="password" id="password-input" class="login-input" placeholder="PON TU HUELLA">
+
+      <a href="#">Olvidé mi contraseña</a>
+
+      <button class="btn-login">
+        Acceder
+      </button>
+    </form>
+
+    <img class="logo-etn-footer" src="./img/logo-etnturistar.png" alt="Iniciar secion ETN">
 
   </main>
   

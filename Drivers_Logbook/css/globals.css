@@ -17,3 +17,16 @@ main{
   width: 100%;
   min-height:100vh;
 }
+
+.main, .index-main{
+  animation: entryScreen .75s;
+}
+
+@keyframes entryScreen {
+  0%{
+    transform: translateX(-100vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
