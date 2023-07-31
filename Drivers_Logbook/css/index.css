@@ -1,6 +1,6 @@
 
 body{
-  background-color: var(--grey-3);
+  background-color: var(--gray-3);
 }
 
 .index-main{
@@ -52,7 +52,7 @@ body{
   width: 85%;
   max-width: 500px;
   text-decoration: none;
-  color: var(--grey-4);
+  color: var(--gray-4);
   background-color: var(--primary-color);
   padding: 15px;
   font-size: 18px;
