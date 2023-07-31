@@ -73,6 +73,11 @@
   text-align: center;
   gap: 10px;
   padding-top: 5px;
+  transition: .2s;
+}
+
+.driver-menu li:active{
+  transform: scale(0.90);
 }
 
 .driver-menu-icon{
