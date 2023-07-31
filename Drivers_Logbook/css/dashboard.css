@@ -95,3 +95,43 @@
   height: 60%;
   fill: #fff;
 }
+.driver-table{
+  font-size: 8px;
+  font-weight: 700;
+  padding: 10px 5px;
+  
+}
+
+table, tr{
+  display: flex;
+  width: 100%;
+}
+.first-row td{
+  display: flex;
+  justify-content: center;
+  border: .1px solid #000;
+  min-width: calc(100vw/29);
+  padding: 2px 0px;
+}
+
+
+.row-vertical td{
+  aspect-ratio: 9/11;
+  display: flex;
+  justify-content: center;
+  border: .1px solid #000;
+  min-width: calc(100vw / 58);
+  padding: 2px 0px;
+}
+
+.total-cell{
+  min-width: calc((100vw/29) * 2) !important;
+}
+
+.first-col{
+  min-width: calc((100vw/29) * 2) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
