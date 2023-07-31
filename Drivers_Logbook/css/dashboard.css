@@ -28,3 +28,65 @@
   background-color: var(--gray-1);
   transform: translateX(-100vw);
 }
+
+.data-driver{
+  width: 100%;
+}
+
+.header-section{
+  width: 100%;
+  background-color: var(--gray-2);
+  padding: 3px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.driver-info{
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  padding: 5px 10px;
+}
+
+.driver-info span{
+  font-weight: 700;
+}
+.driver-menu-container{
+  background-color: var(--gray-1);
+}
+.driver-menu ul{
+  width: 100%;
+  display: grid;
+  list-style: none;
+  justify-content: space-evenly;
+  gap: 1px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.driver-menu li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 9/13;
+  width: 100%;
+  font-size: 9px;
+  text-align: center;
+  gap: 10px;
+  padding-top: 5px;
+}
+
+.driver-menu-icon{
+  aspect-ratio: 1/1;
+  width: 80%;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.driver-menu-icon svg{
+  width: 60%;
+  height: 60%;
+  fill: #fff;
+}
