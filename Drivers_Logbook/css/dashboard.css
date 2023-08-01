@@ -119,6 +119,8 @@ table, tr{
   aspect-ratio: 9/11;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: red;
   border: .1px solid #000;
   min-width: calc(100vw / 58);
   padding: 2px 0px;
@@ -128,10 +130,29 @@ table, tr{
   min-width: calc((100vw/29) * 2) !important;
 }
 
-.first-col{
+.row-vertical > .first-col{
   min-width: calc((100vw/29) * 2) !important;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 900;
+  color: #000;
+}
+
+.history-info svg{
+  width: 30px;
+  height: 30px;
+}
+
+.history-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.history-info span, .history-info p{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 600;
 }

@@ -22,6 +22,10 @@ main{
   animation: entryScreen .75s;
 }
 
+.orange{
+  background-color: var(--primary-color);
+}
+
 @keyframes entryScreen {
   0%{
     transform: translateX(-100vw);
