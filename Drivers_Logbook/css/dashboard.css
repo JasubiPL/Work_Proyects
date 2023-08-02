@@ -130,7 +130,7 @@ table, tr{
   min-width: calc((100vw/29) * 2) !important;
 }
 
-.row-vertical > .first-col{
+.row-vertical > .first-col, .first-col{
   min-width: calc((100vw/29) * 2) !important;
   display: flex;
   justify-content: center;
@@ -155,4 +155,54 @@ table, tr{
   gap: 5px;
   align-items: center;
   font-weight: 600;
+  min-height: 30px;
 }
+
+.summary{
+  width: 80%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  transform: translateX(-80vw);
+  transition: .25s linear;
+}
+
+.summary-grafic-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 20px;
+}
+.summary-grafic{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 5px;
+  text-align: center;
+}
+
+.summary-grafic span{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.grafic-1, .grafic-2{
+  border: 10px solid var(--gray-1);
+}
+
+.grafic-3{
+  border: 10px solid var(--primary-color);
+}
+

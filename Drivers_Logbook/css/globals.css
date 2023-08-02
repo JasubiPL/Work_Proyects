@@ -1,6 +1,6 @@
 :root{
   --primary-color: #ec8a15;
-  --gray-1: #f2f2f2;
+  --gray-1: #e2e2e2;
   --gray-2: #636764;
   --gray-3: #3b3d40;
   --gray-4:  #2c2c31;
@@ -24,6 +24,10 @@ main{
 
 .orange{
   background-color: var(--primary-color);
+}
+
+.gray{
+  background-color: var(--gray-1);
 }
 
 @keyframes entryScreen {
