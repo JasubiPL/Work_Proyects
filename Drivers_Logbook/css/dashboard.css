@@ -17,7 +17,10 @@
 .menu-icon, 
 .graph-icon, 
 .return-icon,
-.save-icon{
+.save-icon,
+.event-return-icon,
+.printer-icon,
+.email-icon{
   fill: #fff;
   height: 30px;
   width: 30px;
@@ -242,4 +245,130 @@ table, tr{
 
 .status-form textarea{
   min-height: 10vh;
+}
+
+/*------- Event History Modal ----------*/
+
+.event-history{
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: .2s linear;
+  transform: translateX(-100vw);
+}
+
+.icons-group{
+  display: flex;
+  gap: 20px;
+}
+
+.events-menu ul{
+  width: 100%;
+  padding: 10px;
+  background-color: var(--gray-1);
+  color: var(--gray-3);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/*---- Detail ------*/
+
+.detail-row-events{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row-event{
+  padding: 5px;
+  background-color: var(--primary-color);
+}
+
+.row-event-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-event-header span{
+  display: flex;
+  gap: 10px;
+}
+
+#detail-modal{
+  display: flex;
+}
+
+/*---- Data ------*/
+
+.event-content{
+  flex-direction: column;
+  display: none;
+}
+
+.data-modal-row{
+  width: 100%;
+  display: flex;
+}
+
+.data-modal-row p{
+  width: 50%;
+  padding: 5px;
+}
+
+.event-content button{
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+  transition: .25s;
+}
+
+.event-content button:active{
+  transform: scale(.90);
+}
+
+.btn-add{
+  width: 30%;
+  padding: 10px 10px;
+  align-self: flex-end;
+}
+
+.btn-points{
+  padding: 10px;
+}
+
+.btn-parameters{
+  padding: 15px;
+  align-self: center;
+  width: 50%;
+  margin: 50px !important;
+}
+
+/*---- Signature ------*/
+
+.signature-area{
+  height: 60vh;
+  background-color: var(--gray-1);
+  margin: 20px;
+}
+
+.btn-sendSignature{
+  width: 50%;
+  padding: 15px;
+  align-self: center;
+}
+
+/*---- Route ------*/
+
+#map{
+  background-color: var(--gray-1);
+  height: 70vh;
+  margin: 10px;
 }
