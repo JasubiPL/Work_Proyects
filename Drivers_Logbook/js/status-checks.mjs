@@ -1,11 +1,19 @@
 export const btnDriving = document.getElementById("btn-driving")
-export const btnPause = document.getElementById("btn-pause")
-export const btnAuxiliary = document.getElementById("btn-auxiliary")
-export const btnExceptions = document.getElementById("btn-exceptions")
-export const btnBreaks = document.getElementById("btn-breaks")
-export const btnOutService = document.getElementById("btn-outService")
-
+const btnPause = document.getElementById("btn-pause")
+const btnAuxiliary = document.getElementById("btn-auxiliary")
+const btnExceptions = document.getElementById("btn-exceptions")
+const btnBreaks = document.getElementById("btn-breaks")
+const btnOutService = document.getElementById("btn-outService")
+const statusTitle = document.getElementById("status-title")
 const btnControls = document.querySelectorAll(".driver-menu-icon")
+const statusModal = document.querySelector(".status")
+
+const btnReturn = document.querySelector(".return-icon").addEventListener("click", () =>{
+  statusModal.style.transform = "translateX(-100vw)"
+  confirm("¿Salir sin guardar cambios?")
+})
+
+const btnSave = document.querySelector(".save-icon").addEventListener("click", saveStatus)
 
 btnDriving.addEventListener("click", activeDriving)
 btnPause.addEventListener("click", activePause)
@@ -22,6 +30,8 @@ function activeDriving(){
   })
 
   btnDriving.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Conduciendo"
 
 }
 
@@ -33,6 +43,8 @@ function activePause(){
   })
 
   btnPause.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Pausa"
 
 }
 
@@ -43,6 +55,8 @@ function activeAuxiliary(){
   })
 
   btnAuxiliary.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Actividades Auxiliares"
 
 }
 
@@ -53,6 +67,8 @@ function activeExceptions(){
   })
 
   btnExceptions.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Casos de Excepcion"
 
 }
 
@@ -63,6 +79,9 @@ function activeBreaks(){
   })
 
   btnBreaks.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Descanso"
+  
 
 }
 
@@ -73,5 +92,12 @@ function activeOutService(){
   })
 
   btnOutService.classList.add("active")
+  statusModal.style.transform = "translateX(0)"
+  statusTitle.innerText = "Fuera de Servicio"
 
+}
+
+function saveStatus(){
+  confirm("¿Está seguro de grabar los cambios?")
+  statusModal.style.transform = "translateX(-100vw)"
 }
