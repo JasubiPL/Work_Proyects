@@ -1,6 +1,6 @@
 
 body{
-  background-color: var(--gray-3);
+  background-color: #fff;
 }
 
 .index-main{
@@ -18,8 +18,7 @@ body{
 
 .index-header img{
   width: 80%;
-  padding: 20px;
-  background-color: #fff;
+
 }
 .principal-text svg{
   width: 40px;
@@ -52,7 +51,7 @@ body{
   width: 85%;
   max-width: 500px;
   text-decoration: none;
-  color: var(--gray-4);
+  color: #fff;
   background-color: var(--primary-color);
   padding: 15px;
   font-size: 18px;
