@@ -22,12 +22,16 @@ main{
   animation: entryScreen .75s;
 }
 
-.orange{
+.orange, .desactive{
   background-color: var(--primary-color);
 }
 
 .gray{
   background-color: var(--gray-1);
+}
+
+.active{
+  background-color: var(--gray-2);
 }
 
 @keyframes entryScreen {

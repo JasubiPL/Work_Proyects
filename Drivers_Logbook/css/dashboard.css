@@ -83,7 +83,6 @@
 .driver-menu-icon{
   aspect-ratio: 1/1;
   width: 80%;
-  background-color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
