@@ -9,6 +9,7 @@ const noteOptions = document.getElementById("note-options")
 const pauseOptions = document.getElementById("pause-options")
 const exceptionsOptions = document.getElementById("exceptions-options")
 const auxiliaryOptions = document.getElementById("auxiliary-options")
+const formDate = document.getElementById(".status-form-date")
 const statusTitle = document.getElementById("status-title")
 
 const statusModal = document.querySelector(".status")
@@ -45,7 +46,7 @@ function activeDriving(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Conduciendo"
   noteOptions.style.display = "block"
-
+  formDate.style.display = "none"
 }
 
 
@@ -63,6 +64,7 @@ function activePause(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Pausa"
   pauseOptions.style.display = "block"
+  formDate.style.display = "block"
 }
 
 function activeAuxiliary(){
@@ -79,7 +81,7 @@ function activeAuxiliary(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Actividades Auxiliares"
   auxiliaryOptions.style.display = "block"
-
+  formDate.style.display = "none"
 }
 
 function activeExceptions(){
@@ -96,6 +98,7 @@ function activeExceptions(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Casos de Excepcion"
   exceptionsOptions.style.display = "block"
+  formDate.style.display = "none"
 }
 
 function activeBreaks(){
@@ -112,7 +115,7 @@ function activeBreaks(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Descanso"
   noteOptions.style.display = "block"
-
+  formDate.style.display = "none"
 }
 
 function activeOutService(){
@@ -129,6 +132,7 @@ function activeOutService(){
   statusModal.style.transform = "translateX(0)"
   statusTitle.innerText = "Fuera de Servicio"
   noteOptions.style.display = "block"
+  formDate.style.display = "none"
 }
 
 function saveStatus(){
