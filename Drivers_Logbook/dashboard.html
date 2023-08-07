@@ -46,12 +46,58 @@
         <p>Datos del Operador/Conductor</p>
       </header>
       <div class="driver-info">
-        <span id="driver-name">Nombre: </span>
-        <p>OSCAR ROLANDO FLORES RANGEL</p>
+        <span id="driver-name">Nombre o Razon Social: </span>
+        <p>GHO NETWORKS SA DE CV</p>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">Marca: </span>
+          <p>SCA</p>
+        </div>
+        <div>
+          <span id="driver-licence">Modelo: </span>
+          <p>1999</p>
+        </div>
+      </div>
+      <div class="driver-info col-2">
+        <div>
+          <span id="driver-licence">Placas: </span>
+          <p>834HV3</p>
+        </div>
+        <div>
+          <span id="driver-licence">No.Economico: </span>
+          <p>1009</p>
+        </div>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">Tipo Servicio: </span>
+          <p>PASAJE</p>
+        </div>
+        <div>
+          <span id="driver-licence">Modalidad: </span>
+          <p>Economico</p>
+        </div>
       </div>
       <div class="driver-info">
-        <span id="driver-licence">Licencia: </span>
-        <p>TAMP202393</p>
+        <span id="driver-name">Nombre del Conductor: </span>
+        <p>JOEL NOHPAL VELAZCO</p>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">No.Empleado: </span>
+          <p>49001809</p>
+        </div>
+        <div>
+          <span id="driver-licence">No. Licencia: </span>
+          <p>PUE0018844</p>
+        </div>
+      </div>
+      <div class="driver-info col-2">
+        <div>
+          <span id="driver-licence">Vigencia Licencia: </span>
+          <p>12/09/2023</p>
+        </div>
       </div>
     </section>
     <section class="driver-menu-container">
@@ -601,8 +647,52 @@
     <form class="status-form">
       <label for="">Ubicación</label> <br>
       <input type="text"><br>
-      <label for="">Notas</label> <br>
-      <textarea ></textarea>
+      <div id="note-options" class="status-form-options">
+        <label for="">Nota</label> <br>
+        <textarea></textarea>
+      </div>
+      <div id="pause-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Descenso de Pasaje</option>
+          <option value="">Cambio de Conductor</option>
+          <option value="">Validar llantas</option>
+          <option value="">Ruido en el motor</option>
+        </select>
+      </div>
+      <div id="exceptions-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Preventivo básico del vehículo</option>
+          <option value="">Reparación de averías simples en ruta</option>
+          <option value="">Verificar las condiciones mecánicas y del equipo, antes-durante-después del viaje</option>
+        </select>
+      </div>
+      <div id="auxiliary-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Accidente en carretera</option>
+          <option value="">Bloqueo en Caseta</option>
+          <option value="">LLanta ponchada</option>
+          <option value="">Deslave en carretera</option>
+        </select>
+      </div>
+      <div class="status-form-date">
+        <div class="form-date-row">
+          <span>Fecha</span>
+          <p>12</p>
+          <p>noviembre</p>
+          <p>2023</p>
+        </div>
+        <div class="form-date-row">
+          <span>Hora</span>
+          <p>10</p>
+          <p>05</p>
+        </div>
+      </div>
     </form>
   </section>
 
@@ -1013,18 +1103,22 @@
       <div class="data-modal-row">
         <p>Origen</p>
         <p>Salida</p>
+        <p>Hora</p>
       </div>
       <div class="data-modal-row gray">
         <p>MEXICALI</p>
         <p>17/07/2019</p>
+        <p>14:00:00</p>
       </div>
       <div class="data-modal-row">
         <p>Destino</p>
         <p>Llegada</p>
+        <p>Hora</p>
       </div>
       <div class="data-modal-row gray">
         <p>TIJUANA</p>
         <p>17/07/2019</p>
+        <p>09:28:31</p>
       </div>
       <div class="data-modal-row">
         <p>Punto Intermedio</p>
