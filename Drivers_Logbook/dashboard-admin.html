@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/globals.css">
-  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="./css/dashboard-admin.css">
   <link rel="shortcut icon" href="./img/logoiam.ico" type="image/x-icon">
   <title>Bitácora de Conducción | Bitacora de Conductores IAMSA </title>
 </head>
@@ -652,35 +652,56 @@
         <textarea></textarea>
       </div>
       <div id="pause-options" class="status-form-options">
-        <label for="">Motivo</label> <br>
-        <select name="" >
-          <option value="">Seleccionar</option>
-          <option value="">Descenso de Pasaje</option>
-          <option value="">Cambio de Conductor</option>
-          <option value="">Validar llantas</option>
-          <option value="">Ruido en el motor</option>
-        </select>
+        <section class="reason-option">
+          <label for="">Motivo</label> <br>
+          <select name="" >
+            <option value="">Seleccionar</option>
+            <option value="">Descenso de Pasaje</option>
+            <option value="">Cambio de Conductor</option>
+            <option value="">Validar llantas</option>
+            <option value="">Ruido en el motor</option>
+          </select>
+        </section>
+        <section>
+          <button class="add-reason">Agregar +</button>
+        </section>
+        <section class="new-reason">          
+        </section>
       </div>
       <div id="exceptions-options" class="status-form-options">
-        <label for="">Motivo</label> <br>
-        <select name="" >
-          <option value="">Seleccionar</option>
-          <option value="">Preventivo básico del vehículo</option>
-          <option value="">Reparación de averías simples en ruta</option>
-          <option value="">Verificar las condiciones mecánicas y del equipo, antes-durante-después del viaje</option>
-        </select>
+        <section>
+          <label for="">Motivo</label> <br>
+          <select name="" >
+            <option value="">Seleccionar</option>
+            <option value="">Preventivo básico del vehículo</option>
+            <option value="">Reparación de averías simples en ruta</option>
+            <option value="">Verificar las condiciones mecánicas y del equipo, antes-durante-después del viaje</option>
+          </select>
+        </section>
+        <section>
+          <button class="add-reason">Agregar +</button>
+        </section>
+        <section class="new-reason">          
+        </section>
       </div>
       <div id="auxiliary-options" class="status-form-options">
-        <label for="">Motivo</label> <br>
-        <select name="" >
-          <option value="">Seleccionar</option>
-          <option value="">Accidente en carretera</option>
-          <option value="">Bloqueo en Caseta</option>
-          <option value="">LLanta ponchada</option>
-          <option value="">Deslave en carretera</option>
-        </select>
+        <section>
+          <label for="">Motivo</label> <br>
+          <select name="" >
+            <option value="">Seleccionar</option>
+            <option value="">Accidente en carretera</option>
+            <option value="">Bloqueo en Caseta</option>
+            <option value="">LLanta ponchada</option>
+            <option value="">Deslave en carretera</option>
+          </select>
+        </section>
+        <section>
+          <button class="add-reason">Agregar +</button>
+        </section>
+        <section class="new-reason">          
+        </section>
       </div>
-      <div id=".status-form-date" class="status-form-date">
+      <div id="status-form-date" class="status-form-date">
         <div class="form-date-row">
           <span>Fecha</span>
           <p>12</p>
@@ -694,456 +715,469 @@
         </div>
       </div>
     </form>
+
+    <!---- Status Modal > Add Reason Modal-->
+    <div class="add-reason-modal">
+      <p>Motivo</p>
+      <textarea id="reason-value"></textarea>
+      <button id="btn-add-reason">Agregar</button>
+    </div>
   </section>
 
-   <!---- Event History Modal-->
+  <!---- Event History Modal-->
 
-   <section class="event-history">
-    <header class="dashboard-header">
-      <div class="event-return-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24">
-          <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
-        </svg>
+  <section class="event-history">
+  <header class="dashboard-header">
+    <div class="event-return-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24">
+        <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
+      </svg>
+    </div>
+    <p id="event-title">
+      Jueves 18 Jul.
+    </p>
+    <div class="icons-group">
+      <div class="printer-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M24,9a3,3,0,0,0-3-3H19V0H5V6H3A3,3,0,0,0,0,9V21H5v3H19V21h5ZM7,2H17V6H7ZM17,22H7V16H17Zm5-3H19V14H5v5H2V9A1,1,0,0,1,3,8H21a1,1,0,0,1,1,1Z"/><rect x="15" y="10" width="4" height="2"/></g></svg>
       </div>
-      <p id="event-title">
-        Jueves 18 Jul.
-      </p>
-      <div class="icons-group">
-        <div class="printer-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M24,9a3,3,0,0,0-3-3H19V0H5V6H3A3,3,0,0,0,0,9V21H5v3H19V21h5ZM7,2H17V6H7ZM17,22H7V16H17Zm5-3H19V14H5v5H2V9A1,1,0,0,1,3,8H21a1,1,0,0,1,1,1Z"/><rect x="15" y="10" width="4" height="2"/></g></svg>
-        </div>
-        <div class="email-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M21,1H3A3,3,0,0,0,0,4V23H24V4A3,3,0,0,0,21,1ZM3,3H21a1,1,0,0,1,1,1v.667l-7.878,7.879a3.007,3.007,0,0,1-4.244,0L2,4.667V4A1,1,0,0,1,3,3ZM2,21V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V21Z"/></g></svg>
-        </div>
+      <div class="email-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M21,1H3A3,3,0,0,0,0,4V23H24V4A3,3,0,0,0,21,1ZM3,3H21a1,1,0,0,1,1,1v.667l-7.878,7.879a3.007,3.007,0,0,1-4.244,0L2,4.667V4A1,1,0,0,1,3,3ZM2,21V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V21Z"/></g></svg>
       </div>
-    </header>
-    <nav class="events-menu">
-      <ul>
-        <li id="btn-detail" class="events-menu_options text-active">Detalle</li>
-        <li id="btn-data" class="events-menu_options">Datos</li>
-        <li id="btn-signature" class="events-menu_options">Firma</li>
-        <li id="btn-route" class="events-menu_options">Recorrido</li>
-      </ul>
-    </nav>
-    <section id="detail-modal" class="event-content">
-      <div class="event-modal">
-        <section class="driver-table">
-          <table cellspacing="0">
-            <tbody>
-              <tr class="first-row">
-                <td class="first-col"></td>
-                <td colspan="2">1</td>
-                <td colspan="2">2</td>
-                <td colspan="2">3</td>
-                <td colspan="2">4</td>
-                <td colspan="2">5</td>
-                <td colspan="2">6</td>
-                <td colspan="2">7</td>
-                <td colspan="2">8</td>
-                <td colspan="2">9</td>
-                <td colspan="2">10</td>
-                <td colspan="2">11</td>
-                <td colspan="2">12</td>
-                <td colspan="2">13</td>
-                <td colspan="2">14</td>
-                <td colspan="2">15</td>
-                <td colspan="2">16</td>
-                <td colspan="2">17</td>
-                <td colspan="2">18</td>
-                <td colspan="2">19</td>
-                <td colspan="2">20</td>
-                <td colspan="2">21</td>
-                <td colspan="2">22</td>
-                <td colspan="2">23</td>
-                <td colspan="2">24</td>
-                <td class="total-cell">TOTAL</td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">C</td>
-                <td>x</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">P</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">AX</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">CX</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">D</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-              <tr class="row-vertical">
-                <td class="first-col">FS</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="total-cell"></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section class="detail-row-events">
-          <div class="row-event">
-            <div class="row-event-header">
-              <p>Fuera de Servicio</p>
-              <span>
-                <p>12:00AM</p>
-                <p>23h 59m</p>
-              </span>
-            </div>
-            <p>Libre a Zapotlanejo Km. 1.5, Nueva Central</p>
+    </div>
+  </header>
+  <nav class="events-menu">
+    <ul>
+      <li id="btn-detail" class="events-menu_options text-active">Detalle</li>
+      <li id="btn-data" class="events-menu_options">Datos</li>
+      <li id="btn-signature" class="events-menu_options">Firma</li>
+      <li id="btn-route" class="events-menu_options">Recorrido</li>
+    </ul>
+  </nav>
+  <section id="detail-modal" class="event-content">
+    <div class="event-modal">
+      <section class="driver-table">
+        <table cellspacing="0">
+          <tbody>
+            <tr class="first-row">
+              <td class="first-col"></td>
+              <td colspan="2">1</td>
+              <td colspan="2">2</td>
+              <td colspan="2">3</td>
+              <td colspan="2">4</td>
+              <td colspan="2">5</td>
+              <td colspan="2">6</td>
+              <td colspan="2">7</td>
+              <td colspan="2">8</td>
+              <td colspan="2">9</td>
+              <td colspan="2">10</td>
+              <td colspan="2">11</td>
+              <td colspan="2">12</td>
+              <td colspan="2">13</td>
+              <td colspan="2">14</td>
+              <td colspan="2">15</td>
+              <td colspan="2">16</td>
+              <td colspan="2">17</td>
+              <td colspan="2">18</td>
+              <td colspan="2">19</td>
+              <td colspan="2">20</td>
+              <td colspan="2">21</td>
+              <td colspan="2">22</td>
+              <td colspan="2">23</td>
+              <td colspan="2">24</td>
+              <td class="total-cell">TOTAL</td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">C</td>
+              <td>x</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">P</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">AX</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">CX</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">D</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+            <tr class="row-vertical">
+              <td class="first-col">FS</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="total-cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="detail-row-events">
+        <div class="row-event">
+          <div class="row-event-header">
+            <p>Fuera de Servicio</p>
+            <span>
+              <p>12:00AM</p>
+              <p>23h 59m</p>
+            </span>
           </div>
-          <div class="row-event">
-            <div class="row-event-header">
-              <p>Conduciendo</p>
-              <span>
-                <p>3:28 PM</p>
-                <p>11h 19m</p>
-              </span>
-            </div>
-            <p>Moralistas 23, San Jose Aculco</p>
+          <p>Libre a Zapotlanejo Km. 1.5, Nueva Central</p>
+        </div>
+        <div class="row-event">
+          <div class="row-event-header">
+            <p>Conduciendo</p>
+            <span>
+              <p>3:28 PM</p>
+              <p>11h 19m</p>
+            </span>
           </div>
+          <p>Moralistas 23, San Jose Aculco</p>
+        </div>
 
-        </section>
-      </div>
-    </section>
+      </section>
+    </div>
+  </section>
 
-    <section id="data-modal" class="event-content">
-      <div class="data-modal-row">
-        <p>Origen</p>
-        <p>Salida</p>
-        <p>Hora</p>
-      </div>
-      <div class="data-modal-row gray">
-        <p>MEXICALI</p>
-        <p>17/07/2019</p>
-        <p>14:00:00</p>
-      </div>
-      <div class="data-modal-row">
-        <p>Destino</p>
-        <p>Llegada</p>
-        <p>Hora</p>
-      </div>
-      <div class="data-modal-row gray">
-        <p>TIJUANA</p>
-        <p>17/07/2019</p>
-        <p>09:28:31</p>
-      </div>
-      <div class="data-modal-row">
-        <p>Punto Intermedio</p>
-      </div>
-      <button class="btn-add">Agregar +</button>
-      <button class="btn-points">Puntos Intermedios</button>
-      <button class="btn-parameters">Parametros</button>
-    </section>
+  <section id="data-modal" class="event-content">
+    <div class="data-modal-row">
+      <p>Origen</p>
+      <p>Salida</p>
+      <p>Hora</p>
+      <p>No.ROL</p>
+    </div>
+    <div class="data-modal-row gray">
+      <p>MEXICALI</p>
+      <p>17/07/2019</p>
+      <p>14:00:00</p>
+      <p></p>
+    </div>
+    <div class="data-modal-row">
+      <p>Destino</p>
+      <p>Llegada</p>
+      <p>Hora</p>
+      <p>No.ROL</p>
+    </div>
+    <div class="data-modal-row gray">
+      <p>TIJUANA</p>
+      <p>17/07/2019</p>
+      <p>09:28:31</p>
+      <p></p>
+    </div>
+    <div class="data-modal-row">
+      <p>Punto Intermedio</p>
+    </div>
+    <button class="btn-add">Agregar +</button>
+    <button class="btn-points">Puntos Intermedios</button>
+    <button class="btn-parameters">Parametros</button>
+  </section>
 
-    <section id="signature-modal" class="event-content">
-      <canvas class="signature-area">
+  <section id="signature-modal" class="event-content">
+    <canvas class="signature-area">
 
-      </canvas>
-      <button class="btn-sendSignature">Firmar</button>
-    </section>
+    </canvas>
+    <button class="btn-sendSignature">Firmar</button>
+  </section>
 
-    <section id="route-modal" class="event-content">
-      <div id="map">
+  <section id="route-modal" class="event-content">
+    <div id="map">
 
-      </div>
-    </section>
+    </div>
+  </section>
 
-   </section>
+  </section>
 
-   <script>
+
+
+  <script>
     (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
       key: "YOUR_API_KEY_HERE",
       // Add other bootstrap parameters as needed, using camel case.

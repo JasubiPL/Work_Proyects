@@ -1,0 +1,513 @@
+.dashboard-header{
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.dashboard-header p{
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.menu-icon, 
+.graph-icon, 
+.return-icon,
+.save-icon,
+.event-return-icon,
+.printer-icon,
+.email-icon{
+  fill: #fff;
+  height: 30px;
+  width: 30px;
+}
+
+.principal-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--gray-1);
+  transform: translateX(-100vw);
+}
+
+.data-driver{
+  width: 100%;
+}
+
+.header-section{
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 3px;
+  color: #fff;
+  font-weight: 600;
+  border-top: 2px solid #fff;
+}
+
+.driver-info{
+  width: 100%;
+  font-size: 14px;
+  gap: 5px;
+  padding: 5px 10px;
+  justify-content: space-between;
+}
+
+.col-2{
+  display: flex;
+}
+
+.col-2 div{
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
+
+.driver-info span{
+  font-weight: 700;
+}
+
+.driver-info P{
+  margin-right: 10px;
+}
+.driver-menu-container{
+  background-color: var(--gray-1);
+}
+.driver-menu ul{
+  width: 100%;
+  display: grid;
+  list-style: none;
+  justify-content: space-evenly;
+  gap: 1px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.driver-menu li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  aspect-ratio: 9/13;
+  width: 100%;
+  font-size: 9px;
+  text-align: center;
+  gap: 10px;
+  padding-top: 5px;
+  transition: .2s;
+}
+
+.driver-menu li:active{
+  transform: scale(0.90);
+}
+
+.driver-menu-icon{
+  aspect-ratio: 1/1;
+  width: 80%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.driver-menu-icon svg{
+  width: 60%;
+  height: 60%;
+  fill: #fff;
+}
+.driver-table{
+  font-size: 8px;
+  font-weight: 700;
+  padding: 10px 5px;
+  
+}
+
+table, tr{
+  display: flex;
+  width: 100%;
+}
+.first-row td{
+  display: flex;
+  justify-content: center;
+  border: .1px solid #000;
+  min-width: calc(100vw/29);
+  padding: 2px 0px;
+}
+
+
+.row-vertical td{
+  aspect-ratio: 9/11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  border: .1px solid #000;
+  min-width: calc(100vw / 58);
+  padding: 2px 0px;
+}
+
+.total-cell{
+  min-width: calc((100vw/29) * 2) !important;
+}
+
+.row-vertical > .first-col, .first-col{
+  min-width: calc((100vw/29) * 2) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  color: #000;
+}
+
+.history-info svg{
+  width: 30px;
+  height: 30px;
+}
+
+.history-info, .history-info-2{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.history-info span, 
+.history-info p,
+.history-info-2 span, 
+.history-info-2 p{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 600;
+  min-height: 30px;
+}
+
+/*------- Summary Modal ----------*/
+
+.summary{
+  width: 80%;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  transform: translateX(-80vw);
+  transition: .25s linear;
+}
+
+.summary-grafic-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 20px;
+}
+.summary-grafic{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 5px;
+  text-align: center;
+}
+
+.summary-grafic span{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.grafic-1, .grafic-2{
+  border: 10px solid var(--gray-1);
+}
+
+.grafic-3{
+  border: 10px solid var(--primary-color);
+}
+
+/*------- Satus Modal ----------*/
+
+.status{
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: .2s linear;
+  transform: translateX(-100vw);
+}
+
+.status-form{
+  width: 100%;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.status-form input, 
+.status-form textarea{
+  width: 100%;
+  background-color: var(--gray-1);
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+.status-form-options{
+  display: none;
+}
+
+.status-form textarea{
+  min-height: 10vh;
+}
+
+.status-form select{
+  max-width: 100%;
+  background-color: var(--gray-1);
+  border: none;
+  font-family: 16px;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.status-form-date{
+  background-color: var(--primary-color);
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.form-date-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  & span{
+    width: 100%;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  & p{
+    background-color: #fff;
+    padding: 5px;
+    min-width: 30%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: normal;
+  }
+}
+
+#pause-options,
+#exceptions-options,
+#auxiliary-options{
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+
+  & section{
+    width: 40%;
+  }
+
+  & button{
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    transition: .2s;
+  }
+
+  & button:active{
+    scale: .95;
+  }
+
+  & .new-reason{
+    width: 100%;
+    background-color: var(--gray-1);
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+  }
+}
+
+.add-reason-modal{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top:25vh;
+  left: 15vw;
+  width: 70vw;
+  background-color: var(--gray-1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+
+  & p{
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+  }
+
+  & textarea{
+    margin: 10px;
+    min-width: 90%;
+    min-height: 100px;
+  }
+
+  & button{
+    margin: 10px;
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 50%;
+    transition: .2s;
+  }
+
+  & button:active{
+    scale: .95;
+  }
+}
+
+
+/*------- Event History Modal ----------*/
+
+.event-history{
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transition: .2s linear;
+  transform: translateX(-100vw);
+}
+
+.icons-group{
+  display: flex;
+  gap: 20px;
+}
+
+.events-menu ul{
+  width: 100%;
+  padding: 10px;
+  background-color: var(--gray-1);
+  color: var(--gray-3);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+/*---- Detail ------*/
+
+.detail-row-events{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row-event{
+  padding: 5px;
+  background-color: var(--gray-1);
+}
+
+.row-event-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-event-header span{
+  display: flex;
+  gap: 10px;
+}
+
+#detail-modal{
+  display: flex;
+}
+
+/*---- Data ------*/
+
+.event-content{
+  flex-direction: column;
+  display: none;
+}
+
+.data-modal-row{
+  width: 100%;
+  display: flex;
+}
+
+.data-modal-row p{
+  width: 50%;
+  padding: 5px;
+}
+
+.event-content button{
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+  transition: .25s;
+}
+
+.event-content button:active{
+  transform: scale(.90);
+}
+
+.btn-add{
+  width: 30%;
+  padding: 10px 10px;
+  align-self: flex-end;
+}
+
+.btn-points{
+  padding: 10px;
+}
+
+.btn-parameters{
+  padding: 15px;
+  align-self: center;
+  width: 50%;
+  margin: 50px !important;
+}
+
+/*---- Signature ------*/
+
+.signature-area{
+  height: 60vh;
+  background-color: var(--gray-1);
+  margin: 20px;
+}
+
+.btn-sendSignature{
+  width: 50%;
+  padding: 15px;
+  align-self: center;
+}
+
+/*---- Route ------*/
+
+#map{
+  background-color: var(--gray-1);
+  height: 70vh;
+  margin: 10px;
+}

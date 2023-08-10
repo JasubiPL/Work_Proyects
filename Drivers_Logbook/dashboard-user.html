@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/globals.css">
+  <link rel="stylesheet" href="./css/dashboard-user.css">
+  <link rel="shortcut icon" href="./img/logoiam.ico" type="image/x-icon">
+  <title>Bitácora de Conducción | Bitacora de Conductores IAMSA </title>
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="menu-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24">
+        <rect y="10.5" width="24" height="3"/><rect y="3.5" width="24" height="3"/><rect y="17.5" width="24" height="3"/>
+      </svg>
+    </div>
+    <nav class="principal-menu">
+      <ul>
+        <li>
+          <a href="#">Elemento 1</a>
+        </li>
+        <li>
+          <a href="#">Elemento 1</a>
+        </li>
+        <li>
+          <a href="#">Elemento 1</a>
+        </li>
+        <li>
+          <a href="#">Elemento 1</a>
+        </li>
+      </ul>
+    </nav>
+    <p>
+      Bitácora de Conducción
+    </p>
+    <div class="graph-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+        <path d="M13,0h-2c-1.1,0-2,.9-2,2V24h6V2c0-1.1-.9-2-2-2Zm0,22h-2V2h2V22ZM22,6h-2c-1.1,0-2,.9-2,2V24h6V8c0-1.1-.9-2-2-2Zm0,16h-2V8h2v14ZM4,12H2c-1.1,0-2,.9-2,2v10H6V14c0-1.1-.9-2-2-2Zm0,10H2V14h2v8Z"/>
+      </svg>
+    </div>
+  </header>
+  <main class="main screen">
+    <section class="data-driver">
+      <header class="header-section">
+        <p>Datos del Operador/Conductor</p>
+      </header>
+      <div class="driver-info">
+        <span id="driver-name">Nombre o Razon Social: </span>
+        <p>GHO NETWORKS SA DE CV</p>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">Marca: </span>
+          <p>SCA</p>
+        </div>
+        <div>
+          <span id="driver-licence">Modelo: </span>
+          <p>1999</p>
+        </div>
+      </div>
+      <div class="driver-info col-2">
+        <div>
+          <span id="driver-licence">Placas: </span>
+          <p>834HV3</p>
+        </div>
+        <div>
+          <span id="driver-licence">No.Economico: </span>
+          <p>1009</p>
+        </div>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">Tipo Servicio: </span>
+          <p>PASAJE</p>
+        </div>
+        <div>
+          <span id="driver-licence">Modalidad: </span>
+          <p>Economico</p>
+        </div>
+      </div>
+      <div class="driver-info">
+        <span id="driver-name">Nombre del Conductor: </span>
+        <p>JOEL NOHPAL VELAZCO</p>
+      </div>
+      <div class="driver-info col-2 gray">
+        <div>
+          <span id="driver-licence">No.Empleado: </span>
+          <p>49001809</p>
+        </div>
+        <div>
+          <span id="driver-licence">No. Licencia: </span>
+          <p>PUE0018844</p>
+        </div>
+      </div>
+      <div class="driver-info col-2">
+        <div>
+          <span id="driver-licence">Vigencia Licencia: </span>
+          <p>12/09/2023</p>
+        </div>
+      </div>
+    </section>
+    <section class="driver-menu-container">
+      <header class="header-section">
+        <p id="current-date">Lunes 31 de Julio 2023</p>
+      </header>
+      <nav class="driver-menu">
+        <ul>
+          <li>
+            <span id="btn-driving" class="driver-menu-icon desactive">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M12,0A12.013,12.013,0,0,0,0,12c.6,15.9,23.4,15.893,24,0A12.013,12.013,0,0,0,12,0Zm0,2a10.008,10.008,0,0,1,9.3,6.338L14.024,9.793a10.705,10.705,0,0,1-4.19,0L2.694,8.365A10.009,10.009,0,0,1,12,2Zm-10,10.107,4.155.831a4,4,0,0,1,2.733,2.018l.625,1.153a4.006,4.006,0,0,1,.482,1.9V21.8A10.014,10.014,0,0,1,2.005,12.107ZM14,21.8V18.013a4.006,4.006,0,0,1,.482-1.9l.625-1.153a4,4,0,0,1,2.733-2.018L22,12.107A10.014,10.014,0,0,1,14,21.8Z"/></svg>
+            </span>
+            <p class="driver-menu-text">Conduciendo</p>
+          </li>
+          <li>
+            <span id="btn-pause" class="driver-menu-icon desactive">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="512" height="512"><path d="M6.5,0A3.5,3.5,0,0,0,3,3.5v17a3.5,3.5,0,0,0,7,0V3.5A3.5,3.5,0,0,0,6.5,0Z"/><path d="M17.5,0A3.5,3.5,0,0,0,14,3.5v17a3.5,3.5,0,0,0,7,0V3.5A3.5,3.5,0,0,0,17.5,0Z"/></svg>
+            </span>
+            <p class="driver-menu-text">Pausa</p>
+          </li>
+          <li>
+            <span id="btn-auxiliary" class="driver-menu-icon desactive">
+              <svg id="Layer_1" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m21 15a3 3 0 0 0 -3 3v3a3 3 0 0 0 6 0v-3a3 3 0 0 0 -3-3zm1 6a1 1 0 0 1 -2 0v-3a1 1 0 0 1 2 0z"/><path d="m13 12v-5a1 1 0 0 0 -2 0v4h-3a1 1 0 0 0 0 2h4a1 1 0 0 0 1-1z"/><path d="m23 2a1 1 0 0 0 -1 1v2.374a12 12 0 1 0 -14.364 17.808 1.015 1.015 0 0 0 .364.068 1 1 0 0 0 .364-1.932 10 10 0 1 1 12.272-14.318h-2.636a1 1 0 0 0 0 2h3a3 3 0 0 0 3-3v-3a1 1 0 0 0 -1-1z"/><path d="m15.383 15.076a1 1 0 0 0 -1.09.217l-3 3a1 1 0 0 0 1.414 1.414l1.293-1.293v4.586a1 1 0 0 0 2 0v-7a1 1 0 0 0 -.617-.924z"/></svg>
+            </span>
+            <p class="driver-menu-text">Actividades Auxiliares</p>
+          </li>
+          <li>
+            <span id="btn-exceptions" class="driver-menu-icon desactive">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"><path d="m24,23c0,.553-.447,1-1,1H1c-.553,0-1-.447-1-1s.447-1,1-1h.873l1.469-4h17.316l1.469,4h.873c.553,0,1,.447,1,1Zm-5.913-12H5.913l-1.837,5h15.847l-1.837-5Zm-.735-2l-2.579-7.021C14.341.805,13.252.045,12,.045s-2.341.76-2.773,1.936l-2.579,7.02h10.704Z"/></svg>
+            </span>
+            <p class="driver-menu-text">Casos de Excepción</p>
+          </li>
+          <li>
+            <span id="btn-breaks" class="driver-menu-icon desactive">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M2,14H24v8H22V19H2v3H0V2H2Zm3.5-2A2.5,2.5,0,1,0,3,9.5,2.5,2.5,0,0,0,5.5,12ZM21,6H12A3,3,0,0,0,9,9v3H24V9A3,3,0,0,0,21,6Z"/></svg>
+            </span>
+            <p class="driver-menu-text">Descanso</p>
+          </li>
+          <li>
+            <span id="btn-outService" class="driver-menu-icon active">
+              <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.64,18.1L14.24,2.28c-.47-.8-1.3-1.28-2.24-1.28s-1.77,.48-2.23,1.28L.36,18.1h0c-.47,.82-.47,1.79,0,2.6s1.31,1.3,2.24,1.3H21.41c.94,0,1.78-.49,2.24-1.3s.46-1.78-.01-2.6Zm-10.64-.1h-2v-2h2v2Zm0-4h-2v-6h2v6Z"/></svg>
+            </span>
+            <p class="driver-menu-text">Fuera de Servicio</p>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <section class="driver-table">
+      <table cellspacing="0">
+        <tbody>
+          <tr class="first-row">
+            <td class="first-col"></td>
+            <td colspan="2">1</td>
+            <td colspan="2">2</td>
+            <td colspan="2">3</td>
+            <td colspan="2">4</td>
+            <td colspan="2">5</td>
+            <td colspan="2">6</td>
+            <td colspan="2">7</td>
+            <td colspan="2">8</td>
+            <td colspan="2">9</td>
+            <td colspan="2">10</td>
+            <td colspan="2">11</td>
+            <td colspan="2">12</td>
+            <td colspan="2">13</td>
+            <td colspan="2">14</td>
+            <td colspan="2">15</td>
+            <td colspan="2">16</td>
+            <td colspan="2">17</td>
+            <td colspan="2">18</td>
+            <td colspan="2">19</td>
+            <td colspan="2">20</td>
+            <td colspan="2">21</td>
+            <td colspan="2">22</td>
+            <td colspan="2">23</td>
+            <td colspan="2">24</td>
+            <td class="total-cell">TOTAL</td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">C</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">P</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">AX</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">CX</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">D</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+          <tr class="row-vertical">
+            <td class="first-col">FS</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total-cell"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!--history-->
+    <section class="history-driver">
+      <header class="header-section">
+        <p>Datos del Operador/Conductor</p>
+      </header>
+      <div class="history-info">
+        <p>Jueves 18 de Mayo 2023</p>
+        <span>
+          <p>09h 30m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info gray">
+        <p>Jueves 23 de Mayo 2023</p>
+        <span>
+          <p>03h 15m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info">
+        <p>Jueves 18 de Mayo 2023</p>
+        <span>
+          <p>09h 30m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info gray">
+        <p>Jueves 23 de Mayo 2023</p>
+        <span>
+          <p>03h 15m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info">
+        <p>Jueves 18 de Mayo 2023</p>
+        <span>
+          <p>09h 30m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info gray">
+        <p>Jueves 23 de Mayo 2023</p>
+        <span>
+          <p>03h 15m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info">
+        <p>Jueves 18 de Mayo 2023</p>
+        <span>
+          <p>09h 30m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+      <div class="history-info gray">
+        <p>Jueves 23 de Mayo 2023</p>
+        <span>
+          <p>03h 15m</p>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" width="512" height="512" viewBox="0 0 24 24"><path d="M22,8v-2.771c0-1.998-1.331-3.775-3.236-4.321-2.105-.603-4.381-.908-6.764-.908S7.341,.306,5.236,.908c-1.906,.546-3.236,2.323-3.236,4.321v2.771c-1.103,0-2,.897-2,2v2c0,1.103,.897,2,2,2v2.5c0,1.557,.795,2.932,2,3.74v1.26c0,1.378,1.122,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-.5h6v.5c0,1.378,1.121,2.5,2.5,2.5s2.5-1.122,2.5-2.5v-1.26c1.205-.808,2-2.183,2-3.74v-2.5c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-9.5,5V6h8.5v7H12.5Zm-9.5,0V6H11.5v7H3ZM15,5h-6v-.5c0-.276,.224-.5,.5-.5h5c.275,0,.5,.224,.5,.5v.5ZM5.512,1.869c2.015-.577,4.198-.869,6.488-.869s4.473,.292,6.488,.869c1.405,.403,2.408,1.672,2.503,3.131h-4.992v-.5c0-.827-.673-1.5-1.5-1.5h-5c-.827,0-1.5,.673-1.5,1.5v.5H3.008c.096-1.459,1.098-2.728,2.503-3.131ZM1,12v-2c0-.551,.449-1,1-1v4c-.551,0-1-.449-1-1Zm7,9.5c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.757c.469,.166,.974,.257,1.5,.257h1.5v.5Zm11,0c0,.827-.673,1.5-1.5,1.5s-1.5-.673-1.5-1.5v-.5h1.5c.526,0,1.031-.091,1.5-.257v.757Zm2-5c0,1.93-1.57,3.5-3.5,3.5H6.5c-1.93,0-3.5-1.57-3.5-3.5v-2.5h3v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h10v1.5c0,.276,.224,.5,.5,.5s.5-.224,.5-.5v-1.5h3v2.5Zm2-4.5c0,.551-.448,1-1,1v-4c.552,0,1,.449,1,1v2Z"/></svg>
+        </span>
+      </div>
+    </section>
+  </main>
+
+  <!---- Summary Travel Modal-->
+  <section class="summary">
+    <div class="summary-grafic-container">
+      <div class="summary-grafic">
+        <p>Ultimas 24 horas Conduciendo</p>
+        <span class="grafic-1">
+          <p>00h 00m</p>
+          <p>0%</p>
+        </span>
+      </div>
+      <div class="summary-grafic">
+        <p>Ultimos 7 Dias Conduciendo</p>
+        <span class="grafic-2">
+          <p>00h 00m</p>
+          <p>0%</p>
+        </span>
+      </div>
+      <div class="summary-grafic ">
+        <p>Horas Disponibles</p>
+        <span class="grafic-3">
+          <p>14h 00m</p>
+          <p>100%</p>
+        </span>
+      </div>
+    </div>
+    <section class="history-driver">
+      <header class="header-section">
+        <p>Resumen de tiempos en 24 horas</p>
+      </header>
+      <div class="history-info">
+        <p>Fuera de servicio</p>
+        <p>09h 30m</p>
+      </div>
+      <div class="history-info-2 gray">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2 gray">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2 gray">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2 gray">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="history-info-2 gray">
+        <p></p>
+        <p></p>
+      </div>
+    </section>
+  </section>
+
+  <!---- Status Modal-->
+
+  <section class="status">
+    <header class="dashboard-header">
+      <div class="return-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24">
+          <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
+        </svg>
+      </div>
+      <p id="status-title">
+        Conduciendo
+      </p>
+      <div class="save-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" ><g id="_01_align_center" data-name="01 align center"><path d="M19,0H3A3,3,0,0,0,0,3V24H24V5ZM7,2H17V6H7ZM22,22H2V3A1,1,0,0,1,3,2H5V8H19V2.828l3,3Z"/><path d="M12,10a4,4,0,1,0,4,4A4,4,0,0,0,12,10Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,16Z"/></g></svg>
+      </div>
+    </header>
+    <form class="status-form">
+      <label for="">Ubicación</label> <br>
+      <input type="text"><br>
+      <div id="note-options" class="status-form-options">
+        <label for="">Nota</label> <br>
+        <textarea></textarea>
+      </div>
+      <div id="pause-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Descenso de Pasaje</option>
+          <option value="">Cambio de Conductor</option>
+          <option value="">Validar llantas</option>
+          <option value="">Ruido en el motor</option>
+        </select>
+      </div>
+      <div id="exceptions-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Preventivo básico del vehículo</option>
+          <option value="">Reparación de averías simples en ruta</option>
+          <option value="">Verificar las condiciones mecánicas y del equipo, antes-durante-después del viaje</option>
+        </select>
+      </div>
+      <div id="auxiliary-options" class="status-form-options">
+        <label for="">Motivo</label> <br>
+        <select name="" >
+          <option value="">Seleccionar</option>
+          <option value="">Accidente en carretera</option>
+          <option value="">Bloqueo en Caseta</option>
+          <option value="">LLanta ponchada</option>
+          <option value="">Deslave en carretera</option>
+        </select>
+      </div>
+      <div id=".status-form-date" class="status-form-date">
+        <div class="form-date-row">
+          <span>Fecha</span>
+          <p>12</p>
+          <p>noviembre</p>
+          <p>2023</p>
+        </div>
+        <div class="form-date-row">
+          <span>Hora</span>
+          <p>10</p>
+          <p>05</p>
+        </div>
+      </div>
+    </form>
+  </section>
+
+   <!---- Event History Modal-->
+
+   <section class="event-history">
+    <header class="dashboard-header">
+      <div class="event-return-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24">
+          <path d="M19,11H9l3.29-3.29a1,1,0,0,0,0-1.42,1,1,0,0,0-1.41,0l-4.29,4.3A2,2,0,0,0,6,12H6a2,2,0,0,0,.59,1.4l4.29,4.3a1,1,0,1,0,1.41-1.42L9,13H19a1,1,0,0,0,0-2Z"/>
+        </svg>
+      </div>
+      <p id="event-title">
+        Jueves 18 Jul.
+      </p>
+      <div class="icons-group">
+        <div class="printer-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M24,9a3,3,0,0,0-3-3H19V0H5V6H3A3,3,0,0,0,0,9V21H5v3H19V21h5ZM7,2H17V6H7ZM17,22H7V16H17Zm5-3H19V14H5v5H2V9A1,1,0,0,1,3,8H21a1,1,0,0,1,1,1Z"/><rect x="15" y="10" width="4" height="2"/></g></svg>
+        </div>
+        <div class="email-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M21,1H3A3,3,0,0,0,0,4V23H24V4A3,3,0,0,0,21,1ZM3,3H21a1,1,0,0,1,1,1v.667l-7.878,7.879a3.007,3.007,0,0,1-4.244,0L2,4.667V4A1,1,0,0,1,3,3ZM2,21V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V21Z"/></g></svg>
+        </div>
+      </div>
+    </header>
+    <nav class="events-menu">
+      <ul>
+        <li id="btn-detail" class="events-menu_options text-active">Detalle</li>
+        <li id="btn-data" class="events-menu_options">Datos</li>
+        <li id="btn-signature" class="events-menu_options">Firma</li>
+        <li id="btn-route" class="events-menu_options">Recorrido</li>
+      </ul>
+    </nav>
+    <section id="detail-modal" class="event-content">
+      <div class="event-modal">
+        <section class="driver-table">
+          <table cellspacing="0">
+            <tbody>
+              <tr class="first-row">
+                <td class="first-col"></td>
+                <td colspan="2">1</td>
+                <td colspan="2">2</td>
+                <td colspan="2">3</td>
+                <td colspan="2">4</td>
+                <td colspan="2">5</td>
+                <td colspan="2">6</td>
+                <td colspan="2">7</td>
+                <td colspan="2">8</td>
+                <td colspan="2">9</td>
+                <td colspan="2">10</td>
+                <td colspan="2">11</td>
+                <td colspan="2">12</td>
+                <td colspan="2">13</td>
+                <td colspan="2">14</td>
+                <td colspan="2">15</td>
+                <td colspan="2">16</td>
+                <td colspan="2">17</td>
+                <td colspan="2">18</td>
+                <td colspan="2">19</td>
+                <td colspan="2">20</td>
+                <td colspan="2">21</td>
+                <td colspan="2">22</td>
+                <td colspan="2">23</td>
+                <td colspan="2">24</td>
+                <td class="total-cell">TOTAL</td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">C</td>
+                <td>x</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">P</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">AX</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">CX</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">D</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+              <tr class="row-vertical">
+                <td class="first-col">FS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="total-cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="detail-row-events">
+          <div class="row-event">
+            <div class="row-event-header">
+              <p>Fuera de Servicio</p>
+              <span>
+                <p>12:00AM</p>
+                <p>23h 59m</p>
+              </span>
+            </div>
+            <p>Libre a Zapotlanejo Km. 1.5, Nueva Central</p>
+          </div>
+          <div class="row-event">
+            <div class="row-event-header">
+              <p>Conduciendo</p>
+              <span>
+                <p>3:28 PM</p>
+                <p>11h 19m</p>
+              </span>
+            </div>
+            <p>Moralistas 23, San Jose Aculco</p>
+          </div>
+
+        </section>
+      </div>
+    </section>
+
+    <section id="data-modal" class="event-content">
+      <div class="data-modal-row">
+        <p>Origen</p>
+        <p>Salida</p>
+        <p>Hora</p>
+        <p>No.ROL</p>
+      </div>
+      <div class="data-modal-row gray">
+        <p>MEXICALI</p>
+        <p>17/07/2019</p>
+        <p>14:00:00</p>
+        <p></p>
+      </div>
+      <div class="data-modal-row">
+        <p>Destino</p>
+        <p>Llegada</p>
+        <p>Hora</p>
+        <p>No.ROL</p>
+      </div>
+      <div class="data-modal-row gray">
+        <p>TIJUANA</p>
+        <p>17/07/2019</p>
+        <p>09:28:31</p>
+        <p></p>
+      </div>
+      <div class="data-modal-row">
+        <p>Punto Intermedio</p>
+      </div>
+      <button class="btn-add">Agregar +</button>
+      <button class="btn-points">Puntos Intermedios</button>
+      <button class="btn-parameters">Parametros</button>
+    </section>
+
+    <section id="signature-modal" class="event-content">
+      <canvas class="signature-area">
+
+      </canvas>
+      <button class="btn-sendSignature">Firmar</button>
+    </section>
+
+    <section id="route-modal" class="event-content">
+      <div id="map">
+
+      </div>
+    </section>
+
+   </section>
+
+   <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "YOUR_API_KEY_HERE",
+      // Add other bootstrap parameters as needed, using camel case.
+      // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
+    });
+  </script>
+  <script type="module" src="./js/main.mjs"></script>
+</body>
+</html>
