@@ -44,3 +44,17 @@ main{
     transform: translateX(0);
   }
 }
+
+@keyframes showModal {
+  0%{
+    scale: 0;
+  }
+
+  90%{
+    scale: 1.2;
+  }
+
+  100%{
+    scale: 1;
+  }
+}

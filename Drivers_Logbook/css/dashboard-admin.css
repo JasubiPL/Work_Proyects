@@ -355,6 +355,7 @@ table, tr{
   border-radius: 10px;
   overflow: hidden;
   display: none;
+  animation: showModal .2s;
 
   & p{
     background-color: var(--primary-color);
@@ -510,4 +511,75 @@ table, tr{
   background-color: var(--gray-1);
   height: 70vh;
   margin: 10px;
+}
+
+/*---- outservices Modal ------*/
+
+.outServices-modal{
+  display: none;
+  position: fixed;
+  top: 25vh;
+  left: 5vw;
+  background-color: #fff;
+  width: 90vw;
+  border: 1px solid #000;
+  border-radius: 10px;
+  animation: showModal .2s;
+
+  & .header-first-row{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+
+    & img{
+      width: 25px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    & svg{
+      width: 8%;
+      height: 8%;
+    }
+  }
+
+  & .header-second-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: var(--gray-1);
+
+    & a {
+      width: 5%;
+      height: 5%;
+    }
+  }
+
+  & section{
+    display: flex;
+    margin: 10px 0px;
+    padding: 10px;
+
+    & img{
+      width: 40%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+    }
+
+    & div{
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+
+      & span{
+        font-size: 16px;
+        font-weight: 900;
+        color: var(--primary-color);
+      }
+    }
+  }
 }

@@ -15,6 +15,7 @@ const statusTitle = document.getElementById("status-title")
 
 const statusModal = document.querySelector(".status")
 const reasonModal = document.querySelector(".add-reason-modal")
+const outServiceModal = document.querySelector(".outServices-modal")
 const btnControls = document.querySelectorAll(".driver-menu-icon")
 const formOptions = document.querySelectorAll(".status-form-options")
 const btnShowAddReasonModal = document.querySelectorAll(".add-reason")
@@ -123,21 +124,36 @@ function activeBreaks(){
   formDate.style.display = "block"
 }
 
+// function activeOutService(){
+//   btnControls.forEach(btn =>{
+//     btn.classList.remove("desactive", "active")
+//     btn.classList.add("desactive")
+//   })
+
+//   formOptions.forEach(option =>{
+//     option.style.display = "none"
+//   })
+
+//   btnOutService.classList.add("active")
+//   statusModal.style.transform = "translateX(0)"
+//   statusTitle.innerText = "Fuera de Servicio"
+//   noteOptions.style.display = "block"
+//   formDate.style.display = "none"
+// }
+
 function activeOutService(){
-  btnControls.forEach(btn =>{
-    btn.classList.remove("desactive", "active")
-    btn.classList.add("desactive")
-  })
+    btnControls.forEach(btn =>{
+     btn.classList.remove("desactive", "active")
+     btn.classList.add("desactive")
+   })
 
-  formOptions.forEach(option =>{
-    option.style.display = "none"
-  })
+   formOptions.forEach(option =>{
+     option.style.display = "none"
+   })
 
-  btnOutService.classList.add("active")
-  statusModal.style.transform = "translateX(0)"
-  statusTitle.innerText = "Fuera de Servicio"
-  noteOptions.style.display = "block"
-  formDate.style.display = "none"
+   btnOutService.classList.add("active")
+   outServiceModal.style.display = "block"
+
 }
 
 function saveStatus(){
