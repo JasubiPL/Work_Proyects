@@ -213,10 +213,16 @@
 /*---------- Costumers ---------*/
 .customers{
   width: 100%;
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
   transition: 1.2s ease all;
+}
+
+.costumers_header{
+  width: 100%;
+  max-width: 1200px;
 }
 
 .customers h2{
@@ -236,15 +242,11 @@
   color: var(--primary-color);
 }
 .customers_logo{
-  max-width: 1600px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  column-gap: 30px;
 }
 .customers_logo img{
   height: 230px;
+  margin-left: 50px;
 }
 
 /*------------------------- About Us ------------------------------*/
@@ -442,68 +444,54 @@
   left: calc(50% - 100px);
 }
 
-/*---------- More servises ----------*/
-.more_options{
-  position: relative;
+/*---------- Implementations ----------*/
+.implementations{
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  opacity: 0;
-  transition: 1.2s ease all;
-  overflow: hidden;
-}
-
-.more_options::after{
-  position: absolute;
-  content: "";
-  width: 120vw;
-  height: 400px;
-  background-color: #fff;
-  transform: rotateZ(3deg);
-  top: -340px;
-}
-
-
-.galery_item{
-  display: flex;
-  width: 50%;
-  position: relative;
-  aspect-ratio: 16 / 10;
-}
-.galery_item img{
-  width: 100%;
-  object-fit: cover;
-  transition: all .5s;
-}
-
-.galery_info{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+  padding: 40px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0, 0.8);
+}
+
+.implementations_title h2{
   text-align: center;
-  gap: 20px;
-  color: #fff;
-  transition: .5s;
-}
-
-.galery_info p{
-  width: 100%;
-  max-width: 70%;
-}
-
-.galery_info h3{
-  font-size: 36px;
-  color: var(--secundary-color);
+  color: var(--primary-color);
   font-weight: bold;
+  font-size: 36px;
 }
+.implementations_center{
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin: 20px;
+}
+
+.implementations_btn{
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  color: var(--secundary-color);
+  transition: .2s;
+}
+
+.implementations_btn svg{
+  width: 30px;
+  height: 30px;
+  fill: var(--secundary-color);
+  margin-right: 10px;
+}
+
+.implementations_btn:hover{
+  background-color: var(--secundary-color);
+  color: #fff;
+  
+  & svg{
+    fill: #fff;
+  }
+}
+
 
 /*---------------contact-----------------*/
 .contact{
@@ -703,20 +691,17 @@ footer h3{
     font-size: 36px;
   }
 
+  .implementations_center{
+    padding: 0px 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .customers img{
     height: 180px;
   }
 
   .about_us{
     padding: 100px 20px;
-  }
-
-  .galery_item{
-    aspect-ratio: 1/1;
-    font-size: 14px;
-  }
-  .galery_info h3{
-    font-size: 24px;
   }
 
   .contact_input_short{
@@ -908,10 +893,7 @@ footer h3{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
-  .galery_info h3, .galery_info_2 h3, .galery_title{
-    font-family: var(--titles-font);
-    font-size: 5vw;
-  }
+
   .about_us{
     padding: 50px 10px;
   }
@@ -922,19 +904,15 @@ footer h3{
   .digital_center h2{
     font-size: 28px;
   }
-  /*-------- more options --------*/
-
-  .more_options{
-    padding-top: 50px;
+  
+  /*---------- implementations --------------*/
+  .implementations_title h2{
+    font-size: 28px;
   }
-  .galery_item{
-    width: 100%;
-  }
-  .galery_info{
-    padding: 10px;
-  }
-  .galery_info p{
-    max-width: 90%;
+  .implementations_center{
+    padding: 0px 20px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
   /*-------- contact ------------*/
   .contact{

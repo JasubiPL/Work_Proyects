@@ -8,7 +8,7 @@ const btnOpenMenu = document.getElementById("btn_menu")
 const btnCloseMenu = document.getElementById("btn_close_menu")
 const principalMenu = document.getElementById("principal_menu")
 const costumersSection = document.getElementById("costumers")
-const portfolioSection = document.getElementById("porfolio_section");
+const implementationsSection = document.getElementById("implementations_section");
 const brandingSection = document.getElementById("branding_section")
 const digitalSection = document.getElementById("digital_section")
 const aboutUsCard = document.querySelector(".about_us_center")
@@ -27,7 +27,7 @@ btnCloseMenu.addEventListener('click', hiddenMenu)
 let switchSearch = false
 let switchMenu = false
 
-//FUNCTIONS
+//MY FUNCTIONS
 MenuItems.forEach((item) => {
   item.addEventListener('click', () =>{
       MenuItems.forEach(item =>{
@@ -38,6 +38,7 @@ MenuItems.forEach((item) => {
     
   })
 });
+
 
 function showSearch(){
   if(window.innerWidth <= 500){
@@ -122,7 +123,7 @@ function counterStart(){
 }
 
 //exectute functions
-observer.observe(portfolioSection);
+observer.observe(implementationsSection);
 observer.observe(costumersSection);
 observer.observe(aboutUsCard);
 observer.observe(brandingSection);
