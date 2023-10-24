@@ -167,6 +167,25 @@
   }
 }
 
+/*-------- Carrito Lunch -----------*/
+.landing-modal-body{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  & img{
+  width: 60%;
+  padding: 0px 20px;
+  }
+
+  & p{
+    color: var(--primary-color);
+  }
+
+   
+
+}
+
 /*-------------- Responsive --------------------------*/
 
 @media screen and (max-width:1024px){
