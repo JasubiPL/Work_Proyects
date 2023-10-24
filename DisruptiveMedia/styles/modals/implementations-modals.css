@@ -1,5 +1,5 @@
 /*-------- Cabecera-----------*/
-.modal-header-cabecera h3{
+.modal-header h3{
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -115,6 +115,57 @@
   }
 }
 
+/*-------- Carrito Lunch -----------*/
+
+.lunch-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  & img{
+    max-width: 60%;
+  }
+
+  & .lunch-modal_lunch-data ._lunch-data_rows{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 36px;
+    align-items: center;
+
+    & svg{
+      width: 100px;
+      height: 100px;
+      fill: var(--secundary-color);
+    }
+
+    & span{
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+  }
+
+  & .lunch-modal_lunch-description{
+    width: 100%;
+    max-width: 80%;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  & .lunch-modal_lunch-prise{
+    font-size: 28px;
+
+    & span{
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+
+    & small{
+      font-size: 18px;
+    }
+  }
+}
 
 /*-------------- Responsive --------------------------*/
 
@@ -155,5 +206,40 @@
 
   .cabecera-modal_p4 p{
     font-size: 24px;
+  }
+
+  .lunch-modal-body{
+  
+    & img{
+      max-width: 90%;
+    }
+  
+    & .lunch-modal_lunch-data ._lunch-data_rows{
+      font-size: 18px;
+  
+      & svg{
+        width: 50px;
+        height: 50px;
+      }
+    }
+  
+    & .lunch-modal_lunch-description{
+      max-width: 90%;
+      font-size: 16px;
+    }
+  
+    & .lunch-modal_lunch-prise{
+      font-size: 18px;
+      text-align: center;
+  
+      & span{
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+  
+      & small{
+        font-size: 12px;
+      }
+    }
   }
 }
