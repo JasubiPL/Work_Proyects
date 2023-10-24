@@ -167,7 +167,7 @@
   }
 }
 
-/*-------- Carrito Lunch -----------*/
+/*-------- Landing Page -----------*/
 .landing-modal-body{
   display: flex;
   gap: 20px;
@@ -182,7 +182,107 @@
     color: var(--primary-color);
   }
 
-   
+}
+
+/*-------- Pantallas de Autobuses -----------*/
+.pautobuses-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & img{
+    width: 100%;
+  }
+
+  & .pautobuses-modal_screen-data{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 32%);
+    padding: 20px;
+    gap: 20px;
+
+    & ._screen-data_cols{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px 0px;
+
+      & img{
+        max-width: 80%;
+      }
+
+      & span{
+        display: flex;
+        font-size: 28px;
+        font-weight: bold;
+
+        & svg{
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+          fill: #333;
+        }
+
+      }
+    }
+  }
+
+  & .pautobuses-modal_screen-prise{
+    text-align: center;
+    font-size: 20px;
+    
+    & p{
+      font-size: 36px;
+
+      & span{
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+
+      & small{
+        font-size: 18px;
+      }
+    }
+  }
+
+  & .pautobuses-modal_screen-size{
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    
+    & ._screen-size_cols{
+      display: flex;
+      flex-wrap: wrap;
+      width: 35%;
+      gap: 10px;
+
+      & h4{
+        width: 100%;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      & img{
+        width: 30%;
+        height: 55%;
+      }
+
+      & ul{
+        list-style: none;
+        padding: 0;
+        font-size: 18px;
+        
+        & span{
+          color: var(--primary-color);
+        }
+      }
+
+    }
+  }
 
 }
 
@@ -197,6 +297,37 @@
       height: 50px;
     }
   }
+
+.pautobuses-modal-body{
+  & .pautobuses-modal_screen-size{
+    
+    & ._screen-size_cols{
+      width: 45%;
+
+      & h4{
+        width: 100%;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      & img{
+        width: 35%;
+        height: 55%;
+      }
+
+      & ul{
+        list-style: none;
+        padding: 0;
+        font-size: 14px;
+        
+        & span{
+          color: var(--primary-color);
+        }
+      }
+
+    }
+  }
+}
 }
 
 @media screen and (max-width:820px){
@@ -260,5 +391,105 @@
         font-size: 12px;
       }
     }
+  }
+
+  .landing-modal-body{
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  
+    & img{
+    width: 100%;
+    padding: 0px 20px;
+    }
+  
+    & p{
+      padding: 0px 20px;
+    }
+  
+     
+  
+  }
+
+  .pautobuses-modal-body{
+  
+    & .pautobuses-modal_screen-data ._screen-data_cols{
+
+      & span{
+        font-size: 24px;
+
+        & svg{
+          width: 30px;
+          height: 30px;
+        }
+
+      }
+    }
+  
+    & .pautobuses-modal_screen-prise{
+      font-size: 16px;
+      
+      & p{
+        font-size: 20px;
+  
+        & span{
+          color: var(--primary-color);
+          font-weight: bold;
+        }
+  
+        & small{
+          font-size: 12px;
+        }
+      }
+    }
+  
+    & .pautobuses-modal_screen-size{
+      
+      & ._screen-size_cols{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        gap: 20px;
+        justify-content: center;
+
+  
+        & h4{
+          font-size: 18px;
+          text-align: center;
+        }
+  
+        & img{
+          width: 70%;
+          height: auto;
+        }
+  
+      }
+    }
+  
+  }
+}
+
+@media screen and (max-width:540px){
+  .pautobuses-modal-body{
+  
+    & .pautobuses-modal_screen-data {
+      grid-template-columns: 1fr;
+    }
+  
+    & .pautobuses-modal_screen-prise{
+      font-size: 14px;
+      
+      & p{
+        font-size: 18px;
+        margin-top: 15px;
+
+      }
+    }
+  
+    & .pautobuses-modal_screen-size ._screen-size_cols h4{
+      font-size: 14px;
+      text-align: center;
+    }
+  
   }
 }
