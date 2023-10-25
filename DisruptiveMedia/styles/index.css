@@ -485,11 +485,12 @@
 
 .implementations_btn:hover{
   background-color: var(--secundary-color);
-  color: #fff;
+  color: #fff;  
   
   & svg{
     fill: #fff;
   }
+  
 }
 
 

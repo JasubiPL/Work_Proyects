@@ -397,6 +397,107 @@
   }
 }
 
+/*-------- Portaboleto -----------*/
+.portaboleto-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-size: 18px;
+
+  & .portaboleto-modal_example{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+
+    & img{
+      width: 25%;
+      height: 25%;
+    }
+
+    & .portaboleto_example-rows{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+
+      & .portaboleto_example-row{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-size: 36px;
+        color: var(--primary-color);
+
+        & svg{
+          fill: var(--secundary-color);
+        }
+
+        & span {
+          font-weight: bold;
+        }
+      }
+    }
+    
+  }
+
+  & .portaboleto_description{
+    width: 100%;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  & .portaboleto_size{
+    display: flex;
+    width: 90%;
+    padding: 0px 30px;
+
+    & .portaboleto_size-cols{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & h4{
+        font-size: 24px;
+
+        & span{
+          color: var(--primary-color);
+        }
+      }
+
+      & ul {
+        list-style: none;
+        margin-top: 10px;
+        padding: 0;
+        font-size: 24px;
+
+        & li span{
+          color: var(--primary-color);
+        }
+      }
+
+      & img{
+        width: 100%;
+      }
+    }
+  }
+
+  & .portaboleto_prise{
+    font-size: 36px;
+    text-align: center;
+
+    & span{
+      color: var(--primary-color);
+      font-weight: bold;
+
+      & small{
+        font-size: 24px;
+      }
+    }
+  }
+}
+
 /*-------------- Responsive --------------------------*/
 
 @media screen and (max-width:1024px){
@@ -436,6 +537,49 @@
           }
         }
 
+      }
+    }
+  }
+
+  .portaboleto-modal-body{
+  
+    & .portaboleto-modal_example .portaboleto_example-rows .portaboleto_example-row{
+      font-size: 28px;
+      color: var(--primary-color);
+
+      & svg{
+        width: 50px;
+        height: 50px;
+      }
+      
+    }
+  
+    & .portaboleto_description{
+      max-width: 90%;
+      font-size: 16px;
+    }
+  
+    & .portaboleto_size{
+      width: 100%;
+      padding: 0px 10px;
+
+      & .portaboleto_size-cols{
+  
+        & h4{
+          font-size: 24px;
+        }
+  
+        & ul {
+          font-size: 24px;
+        }
+      }
+    }
+  
+    & .portaboleto_prise{
+      font-size: 24px;
+      
+      & span small{
+        font-size: 16px;
       }
     }
   }
@@ -644,6 +788,39 @@
       }
     } 
   }
+
+  .portaboleto-modal-body{
+  
+    & .portaboleto-modal_example {
+      gap: 20px;
+      
+      & .portaboleto_example-rows .portaboleto_example-row{
+        font-size: 16px;
+        gap: 10px;
+        color: var(--primary-color);
+  
+        & svg{
+          width: 30px;
+          height: 30px;
+        }
+      }
+      
+    }
+  
+    & .portaboleto_description{
+      font-size: 14px;
+    }
+  
+    & .portaboleto_size .portaboleto_size-cols{
+      & h4{
+        font-size: 16px;
+      }
+
+      & ul {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width:540px){
@@ -676,5 +853,26 @@
       width: 100%;
 
     } 
+  }
+
+  .portaboleto-modal-body{
+  
+    & .portaboleto-modal_example {
+      gap: 20px;
+      flex-wrap: wrap;
+
+      & img{
+        width: 90%;
+      }
+      
+    }
+  
+    & .portaboleto_size {
+      flex-wrap: wrap;
+
+      & .portaboleto_size-cols{
+        width: 100%;
+      }
+    }
   }
 }
