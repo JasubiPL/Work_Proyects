@@ -286,6 +286,117 @@
 
 }
 
+/*-------- Pantallas de taquilla -----------*/
+.ptaquilla-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  & img{
+    width: 100%;
+  }
+
+  & .ptaquilla-modal_taquilla-data{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & ._taquilla-data_rows{
+      display: grid;
+      place-items: center;
+      grid-template-columns: repeat(4, 1fr);
+      
+  
+      & img{
+        width: 100%;
+      }
+
+      & .taquillas-icon{
+        width: 60%;
+        background-color: red;
+      }
+
+      & p{
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--primary-color);
+
+        & span{
+          font-weight: normal;
+        }
+      }
+
+      & div {
+        color: var(--secundary-color);
+
+        & svg {
+          fill: var(--secundary-color);
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  & .ptaquilla-modal_taquilla-prise{
+    margin-top: 20px;
+    & small{
+      font-size: 18px;
+    }
+
+    & p{
+      font-size: 36px;
+
+      & span{
+        color: var(--primary-color);
+        font-weight: bold;
+      }
+    }
+  }
+
+  & .ptaquilla-modal_taquilla-size{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    & ._taquilla-size_cols{
+      width: 45%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      & h4{
+        width: 100%;
+        font-weight: bold;
+      }
+
+      & svg{
+        width: 80px;
+        height: 80px;
+      }
+
+      & p{
+        color: #333;
+        font-size: 18px;
+      }
+
+      & ul{
+        list-style: none;
+        padding: 0px 15px;
+        margin: 0;
+
+        & li span{
+          color: var(--primary-color);
+        }
+      }
+
+    }
+  }
+}
+
 /*-------------- Responsive --------------------------*/
 
 @media screen and (max-width:1024px){
@@ -298,36 +409,36 @@
     }
   }
 
-.pautobuses-modal-body{
-  & .pautobuses-modal_screen-size{
-    
-    & ._screen-size_cols{
-      width: 45%;
+  .pautobuses-modal-body{
+    & .pautobuses-modal_screen-size{
+      
+      & ._screen-size_cols{
+        width: 45%;
 
-      & h4{
-        width: 100%;
-        margin: 0;
-        font-weight: bold;
-      }
-
-      & img{
-        width: 35%;
-        height: 55%;
-      }
-
-      & ul{
-        list-style: none;
-        padding: 0;
-        font-size: 14px;
-        
-        & span{
-          color: var(--primary-color);
+        & h4{
+          width: 100%;
+          margin: 0;
+          font-weight: bold;
         }
-      }
 
+        & img{
+          width: 35%;
+          height: 55%;
+        }
+
+        & ul{
+          list-style: none;
+          padding: 0;
+          font-size: 14px;
+          
+          & span{
+            color: var(--primary-color);
+          }
+        }
+
+      }
     }
   }
-}
 }
 
 @media screen and (max-width:820px){
@@ -467,6 +578,72 @@
     }
   
   }
+
+  .ptaquilla-modal-body{
+  
+    & .ptaquilla-modal_taquilla-data ._taquilla-data_rows{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+
+      & p{
+        font-size: 14px;
+      }
+
+      & div {
+        font-size: 14px;
+
+        & svg {
+          width: 30px;
+        }
+      }
+    }
+  
+    & .ptaquilla-modal_taquilla-prise{
+      margin-top: 20px;
+      text-align: center;
+
+      & small{
+        font-size: 14px;
+      }
+  
+      & p{
+        font-size: 18px;
+  
+        & span{
+          color: var(--primary-color);
+          font-weight: bold;
+        }
+      }
+    }
+  
+    & .ptaquilla-modal_taquilla-size{
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+      gap:20px;
+      flex-wrap: wrap;
+  
+      & ._taquilla-size_cols{
+        width: 100%;
+  
+        & h4{
+          font-size: 18px;
+          text-align: center;
+        }
+  
+        & svg{
+          width: 100px;
+          height: 100px;
+        }
+  
+        & p{
+          text-align: center;
+          font-size: 16px;
+        }
+  
+      }
+    } 
+  }
 }
 
 @media screen and (max-width:540px){
@@ -491,5 +668,13 @@
       text-align: center;
     }
   
+  }
+
+  .ptaquilla-modal-body{
+  
+    & .ptaquilla-modal_taquilla-data{
+      width: 100%;
+
+    } 
   }
 }
