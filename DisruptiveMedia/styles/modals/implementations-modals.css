@@ -830,6 +830,81 @@
   }
 }
 
+/*-------- Web Page -----------*/
+.sweb-modal-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  & .sweb-modal_example{
+    display: grid;
+    width: 100%;
+    padding: 25px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+
+    & .sweb-modal_example-cols{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      & .sweb-modal_example-cols-logo{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        & img{
+          width: 40%;
+        }
+      }
+
+      & img{
+        width: 100%;
+      }
+
+      & span{
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 20px;
+
+        & svg{
+          width: 50px;
+          height: 50px;
+          fill: var(--secundary-color);
+        }
+      }
+    }
+  }
+
+  & .sweb-modal__followers{
+    display: flex;
+    font-size: 36px;
+    margin-top: 20px;
+    gap: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 50px;
+
+    & span{
+      background-color: var(--secundary-color);
+      border-radius: 0px 10px 0px 10px;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      height: 40px;
+
+      & svg{
+        width: 20px;
+        height: 20px;
+        fill: #fff;
+      }
+    }
+  }
+}
+
 /*-------------- Responsive --------------------------*/
 
 @media screen and (max-width:1024px){
@@ -1407,6 +1482,36 @@
       }
     }
   }
+
+  .sweb-modal-body{
+    
+    & .sweb-modal_example{
+      padding: 10px;
+      grid-template-columns: repeat(2,1fr);
+      gap: 30px;
+  
+      & .sweb-modal_example-cols{
+  
+        & .sweb-modal_example-cols-logo img{
+          width: 70%;
+        }
+  
+        & span{
+          font-weight: bold;
+          font-size: 18px;
+  
+          & svg{
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  
+    & .sweb-modal__followers{
+      font-size: 24px;
+    }
+  }
 }
 
 @media screen and (max-width:540px){
@@ -1583,6 +1688,19 @@
         width: 30px;
         height: 30px;
       }
+    }
+  }
+
+  .sweb-modal-body{
+    
+    & .sweb-modal_example{
+      padding: 10px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    & .sweb-modal__followers{
+      font-size: 24px;
     }
   }
 }
