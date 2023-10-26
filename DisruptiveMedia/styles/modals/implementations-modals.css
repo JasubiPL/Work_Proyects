@@ -1421,6 +1421,80 @@
   }
 }
 
+/*--------Vallas -----------*/
+.vallas-modal-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .vallas-modal_size{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+
+    & img{
+      width: 60%;
+    }
+    & ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 24px;
+      color: red;
+
+      & li span{
+        color: black;
+      }
+    }
+  }
+
+  & .vallas-modal_prise{
+    font-size: 36px;
+    text-align: center;
+
+    & span{
+      color: red;
+      font-weight: bold;
+
+      & small{
+        font-size: 24px;
+      }
+    }
+  }
+
+  & .vallas-modal_stations{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    text-align: center;
+    justify-content: space-evenly;
+
+    & p{
+      width: 100%;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    & .vallas-modal_stations-cols{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      gap: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+
+      & img{
+        width: 60%;
+      }
+    }
+  }
+}
+
 /*-------------- Responsive --------------------------*/
 
 @media screen and (max-width:1024px){
@@ -1604,6 +1678,13 @@
   .banner-columnas-modal-body{
   
     & .banner-columnas-modal_size ul{
+      font-size: 18px;
+    }
+  }
+
+  .vallas-modal-body{
+  
+    & .vallas-modal_size ul{
       font-size: 18px;
     }
   }
@@ -2296,6 +2377,37 @@
       }
     }
   }
+
+  .vallas-modal-body{
+  
+    & .vallas-modal_size{
+      gap: 10;
+
+      & ul{
+        font-size: 14px;
+      }
+    }
+  
+    & .vallas-modal_prise{
+      font-size: 24px;
+  
+      & span small{
+        font-size: 14px;
+      }
+    }
+  
+    & .vallas-modal_stations{
+      width: 90%;
+  
+      & p{
+        font-size: 18px;
+      }
+  
+      & .vallas-modal_stations-cols{
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width:540px){
@@ -2504,7 +2616,12 @@
 
     & .bancat-modal_stations{
       width: 100%;
+
+      & .bancat-modal_stations-cols{
+        width: 40%;
+      }
     }
+
   }
 
   .banca-modal-body{
@@ -2523,6 +2640,10 @@
 
     & .banca-modal_stations{
       width: 100%;
+
+      & .banca-modal_stations-cols{
+        width: 40%;
+      }
     }
   }
 
@@ -2542,6 +2663,33 @@
 
     & .banner-sotano-modal_stations{
       width: 100%;
+
+      & .banner-sotano-modal_stations-cols{
+        width: 40%;
+      }
+    }
+  }
+
+  .banner-escalera-modal-body{
+  
+    & .banner-escalera-modal_size{
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      & img{
+        width: 80%;
+      }
+      & ul{
+        font-size: 16px;
+      }
+    }
+
+    & .banner-escalera-modal_stations{
+      width: 100%;
+
+      & .banner-escalera-modal_stations-cols{
+        width: 40%;
+      }
     }
   }
 
@@ -2559,8 +2707,13 @@
       }
     }
 
-    & .banner-sotano-modal_stations{
+    & .banner-piso-modal_stations{
       width: 100%;
+
+      & .banner-piso-modal_stations-cols{
+        width: 40%;
+      }
+
     }
   }
 
@@ -2580,6 +2733,11 @@
 
     & .banner-travel-modal_stations{
       width: 100%;
+      gap: 15px;
+
+      & .banner-travel-modal_stations-cols{
+        width: 40%;
+      }
     }
   }
 
@@ -2599,6 +2757,35 @@
 
     & .banner-columnas-modal_stations{
       width: 100%;
+      gap: 15px;
+
+      & .banner-columnas-modal_stations-cols{
+        width: 40%;
+      }
+    }
+  }
+
+  .vallas-modal-body{
+  
+    & .vallas-modal_size{
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      & img{
+        width: 80%;
+      }
+      & ul{
+        font-size: 16px;
+      }
+    }
+
+    & .vallas-modal_stations{
+      width: 100%;
+      gap: 15px;
+      
+      & .vallas-modal_stations-cols{
+        width: 40%;
+      }
     }
   }
 }
