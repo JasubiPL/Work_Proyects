@@ -1,0 +1,129 @@
+/*---- Propios -----*/
+
+/*---- Colors -----*/
+.dev-principal-color{
+  background-color: var(--primary-color) !important;
+}
+
+.dev-text-principal{
+  color: var(--primary-color) !important;
+}
+
+/*---- width and height -----*/
+
+.dev-height-50{
+  height: 50px;
+}
+
+.dev-height-40{
+  height: 40px;
+}
+
+.dev-height-30{
+  height: 40px;
+}
+
+/*---- Decoration -----*/
+.dev-arrow-bottom::after{
+  content: "▼";
+  margin-left: 5px;
+  color: #fff;
+}
+
+/*---- Variants -----*/
+.dev-sub-menu-btn ul:hover{
+  display: block !important;
+}
+
+.dev-submenu a:hover{
+  background-color:var(--primary-color);
+  color: #fff !important;
+}
+
+
+.pointer{
+  cursor: pointer;
+}
+
+/*---- Modificaciones -----*/
+
+.text-white:is(.dropdown-item):hover{
+  color: var(--primary-color) !important;
+}
+
+@media screen and (max-width:820px) {
+  .principal-menu {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    gap: 20px;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .principal-menu > li{
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    width: 25%;
+    padding: 5px;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+  }
+
+  .principal-menu > li > a{
+    max-width: 100%;
+    color: var(--primary-color) !important;
+    font-weight: bolder;
+    white-space:break-spaces;
+    padding: 0;
+  }
+  .dev-primary-submenu{
+    width: 100vw;
+    margin: 0;
+    left: 0;
+    
+  }
+}
+
+@media screen and (max-width:540px){
+  .principal-menu {
+    margin: 20px 10px;
+    gap: 10px;
+  }
+  .principal-menu > li > a{
+    font-size: 12px;
+  }
+  .dev-primary-submenu{
+    position: absolute !important;
+    left: -74vw !important;
+    width: 110vw !important;
+    margin-top: 5px !important;
+    flex-wrap: wrap;
+    padding: 15px !important;
+    gap: 10px;
+  }
+
+  .dev-primary-submenu > li{
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    width: 20%;
+    justify-content: space-evenly;
+    padding: 5px;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+  }
+
+  .dev-primary-submenu > li > a{
+    width: 100%;
+    color: var(--primary-color) !important;
+    white-space:break-spaces;
+    font-size: 9px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .dev-primary-submenu.show{
+    display: flex!important;
+  }
+}

@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul a li{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.selectSerchActive{
+  color:#686868;
+}
+
+.selectSerchInactive{
+  color: #aeaeae;
+}
+
+.selectSerchInactive:hover{
+  background-color: #f2f2f2;
+}
+
+input{
+  outline: none;
+}
