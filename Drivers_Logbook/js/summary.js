@@ -1,5 +1,5 @@
 
-export const btnGrafic = document.querySelector(".graph-icon").addEventListener("click", openSummary)
+const btnGrafic = document.querySelector(".graph-icon").addEventListener("click", openSummary)
 const summaryWindow = document.querySelector(".summary")
 
 let switchMenuSummary = false

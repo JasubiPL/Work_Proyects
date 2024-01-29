@@ -1,4 +1,4 @@
-export const eventHistoryModal = document.querySelector(".event-history")
+const eventHistoryModal = document.querySelector(".event-history")
 const btnDetail = document.getElementById("btn-detail")
 const btnData = document.getElementById("btn-data")
 const btnSignature = document.getElementById("btn-signature")

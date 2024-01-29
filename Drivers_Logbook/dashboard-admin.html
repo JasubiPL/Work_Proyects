@@ -737,11 +737,8 @@
       Jueves 18 Jul.
     </p>
     <div class="icons-group">
-      <div class="printer-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M24,9a3,3,0,0,0-3-3H19V0H5V6H3A3,3,0,0,0,0,9V21H5v3H19V21h5ZM7,2H17V6H7ZM17,22H7V16H17Zm5-3H19V14H5v5H2V9A1,1,0,0,1,3,8H21a1,1,0,0,1,1,1Z"/><rect x="15" y="10" width="4" height="2"/></g></svg>
-      </div>
-      <div class="email-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g id="_01_align_center" data-name="01 align center"><path d="M21,1H3A3,3,0,0,0,0,4V23H24V4A3,3,0,0,0,21,1ZM3,3H21a1,1,0,0,1,1,1v.667l-7.878,7.879a3.007,3.007,0,0,1-4.244,0L2,4.667V4A1,1,0,0,1,3,3ZM2,21V7.5L8.464,13.96a5.007,5.007,0,0,0,7.072,0L22,7.5V21Z"/></g></svg>
+      <div class="pdf-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"><path d="M14.41,0H5c-1.65,0-3,1.35-3,3V24H22V7.59L14.41,0Zm.59,3.41l3.59,3.59h-3.59V3.41Zm5,18.59H4V3c0-.55,.45-1,1-1H13v7h7v13ZM6.97,13h-1.97v6.07h1.25v-2.1h.72c1.11,0,2.01-.89,2.01-1.99s-.9-1.98-2.01-1.98Zm0,2.72h-.71s0-1.47,0-1.47h.71c.41,0,.76,.34,.76,.73s-.35,.73-.76,.73Zm5.03-2.65c-.27,0-.52,0-.75,0h-1.25s0,6,0,6h1.25c.23,0,.48,0,.75,0h0c1.11,0,2-.89,2-1.98v-2.03c0-1.09-.89-1.98-2-1.98h0Zm.75,2v2c0,.45-.36,.75-.75,.75-.14,0-.43,0-.75,0v-3.5c.32,0,.61,0,.75,0,.39,0,.75,.3,.75,.75Zm3.5,4h-1.25v-6.07h4v1.25h-2.75v1.47s1.75,0,1.75,0v1.25h-1.75v2.1Z"/></svg>        
       </div>
     </div>
   </header>
@@ -1155,9 +1152,7 @@
     <div class="data-modal-row">
       <p>Punto Intermedio</p>
     </div>
-    <button class="btn-add">Agregar +</button>
     <button class="btn-points">Puntos Intermedios</button>
-    <button class="btn-parameters">Parametros</button>
   </section>
 
   <section id="signature-modal" class="event-content">
@@ -1210,6 +1205,10 @@
       // Use the 'v' parameter to indicate the version to load (alpha, beta, weekly, etc.)
     });
   </script>
-  <script type="module" src="./js/main.mjs"></script>
+  <!-- <script type="module" src="./js/main.mjs"></script> -->
+  <script src="./js/event-history.js"></script>
+  <script src="./js/status-checks.js"></script>
+  <script src="./js/summary.js"></script>
+
 </body>
 </html>

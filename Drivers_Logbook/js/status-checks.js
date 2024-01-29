@@ -1,4 +1,4 @@
-export const btnDriving = document.getElementById("btn-driving")
+const btnDriving = document.getElementById("btn-driving")
 const btnPause = document.getElementById("btn-pause")
 const btnAuxiliary = document.getElementById("btn-auxiliary")
 const btnExceptions = document.getElementById("btn-exceptions")
