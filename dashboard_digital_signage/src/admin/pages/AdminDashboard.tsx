@@ -2,6 +2,8 @@
 
 export const AdminDashboard = () =>{
   return(
-    <h1>Dashbord Admin</h1>
+    <main className="w-[85%] bg-gray-100">
+      <h1>Dashboardddddddddddd</h1>
+    </main>
   )
 }

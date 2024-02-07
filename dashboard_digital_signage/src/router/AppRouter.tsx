@@ -4,8 +4,9 @@ import { AdminRoutes } from "../admin/routes/AdminRoutes"
 export const AppRouter = () =>{
   return(
     <Routes>
-      <Route path="/*" element={<Navigate to='/admin-dashboard' />} />
-      <Route path="/admin-dashboard" element={<AdminRoutes />} />
+      <Route path="/*" element={<Navigate to='err404' />} />
+      <Route path="/" element={<Navigate to='admin' />} />
+      <Route path="admin/*" element={<AdminRoutes />} />
     </Routes>
   )
 }

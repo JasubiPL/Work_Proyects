@@ -1,15 +1,15 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { AdminDashboard } from "../pages"
-import { Navbar } from "../components"
+import { NavbarAdmin } from "../components"
 
 export const AdminRoutes = () =>{
   return(
-    <>
-    <Navbar />
+    <div className="flex h-screen">
+      <NavbarAdmin />
       <Routes>
-        <Route path="/" element={<Navigate to='/admin-dashboard' />} />
-        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/" element={<Navigate to="dashboard" />} />
+        <Route path="/dashboard" element={<AdminDashboard />} />
       </Routes>
-    </>
+    </div>
   )
 }
