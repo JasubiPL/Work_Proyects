@@ -2,14 +2,14 @@ import { BlueprintsItem, DashboardItem, DocumentationItem, PricedItem, SoftwareI
 
 export const NavbarAdmin = () =>{
   return(
-    <nav className="w-[15%] flex flex-col p-2 h-screen justify-between">
-      <section className="flex flex-col">
-        <div className="flex flex-col items-center">
-          <img className="w-1/3" src="/logo.png" alt="Logo de app" />
-          <h1 className="text-red-600 font-semibold text-lg">Señalizacion Digital IAMSA</h1>
+    <nav className="w-[15%] flex flex-col h-screen justify-between border-r-[1px] border-gray-300">
+      <section className="flex flex-col ">
+        <div className="flex justify-center items-center gap-2">
+          <img className="w-1/6" src="/logo.png" alt="Logo de app" />
+          <h1 className=" font-semibold text-sm">Señalizacion Digital IAMSA</h1>
 
         </div>
-        <ul className="flex flex-col gap-2 mt-16 px-3">
+        <ul className="flex flex-col gap-2 mt-8">
           <DashboardItem />
           <TemplatesItem />
           <BlueprintsItem />
@@ -21,7 +21,7 @@ export const NavbarAdmin = () =>{
 
 
 
-      <span className="w-4/5 text-center py-2 rounded-md bg-gray-200 self-center hover:bg-red-200 hover:text-red-700 cursor-pointer">Logout</span>
+      <span className="w-4/5 text-center py-2 mb-6 rounded-md bg-gray-200 self-center hover:bg-red-200 hover:text-red-700 cursor-pointer">Logout</span>
 
     </nav>
   )
