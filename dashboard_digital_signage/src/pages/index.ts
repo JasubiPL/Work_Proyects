@@ -1,0 +1,6 @@
+export * from "./AdminDashboard"
+export * from "./BlueprintsPage"
+export * from "./DocumentationPage"
+export * from "./PricePage"
+export * from "./SoftwarePage"
+export * from "./TemplatesPage"

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "dashboard-digital-signage",
+  "private_key_id": "d97e5bf1afa45aae2f46383c9143e2e2e616ffbb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCujmtCj0Ayf6x0\nbo6M4mocjhL/LkAma59XnqmPXHqiY7qBXEBjf6Ud0Emkw9Pamspdag/Uny6tNcOT\ndo2lTy/xDwuOgYuXZQosZwFuw/k/aG5VneSIZPtoi/14nyZoL0mpJYaLO2TZkq1b\nBJ0kQOzETReGUqSUtS31AoQ5ERFsp0zBdZhiDvK2FThd3aQiBi7jPEJJ1Pgztm1n\nSeClrJpVPOLq9U74882kBjk1CMi82c/ygmQDcs6RRLta2AmriV46aATD86mTq1Ih\n3L+u5SkrDYdq7gLNtpmEH4JREI2KalRlib7O/DQGmao565FglADr91eO20UCEzRQ\nhgZZRs9JAgMBAAECggEAKD27+32z0pB9bOAZ69+8j7WvKnX6owDXnKb+twaeXPZ5\nxh3C2E1SfvOILrxYiEJ8GZn8aUuDQrosyr+fevcs+bk6tFEoIbBQ7piWi3cRbG1C\nVmmOiGUjUmBHgHnMLGOOaziz8kAwiToXze5b3cI78ytEm5pMx92W6S951QAa0L3F\nJfQKU48pXp9vPHTr9/vdA9eG00GN6eVVVn9O9X1kMFExKirxDx3T9tXYCqgCmd68\nf/YUW4ITDxU4Rcd9yr4P6ScPiC1vGAQqOQ89ORXUdKGoKgqsybRca1JD3LCFAtp3\ndccIj37upkZjRHu1/VE00jowUCQjHatU+iAHTke9cwKBgQDj1qvoUHF3xee63aK0\n95wqyhEmQUdTwfCKR3xsJlFqC2IEkWuaICt7o3QGtJtXOCulSfMJlHMaVz8Qgn/J\nw5ex2SFkdnO2uLliI2H5I5874KGetH/sxQFQMOfzImzsjSuxlAWUBktUESHmbXR9\ndi7BRrKDVbn+A3mO2yo3ppgVuwKBgQDEIcbYStxrmVWBkb9r5JCdXNwAzKhtmOJf\n7/eFASRhQOBo2m4O67GsVBeB0SglanZLsAfuOiA8TVVs+3ChiLQlj4IjpBOG9upX\nq9Xaky9mJ1Y7hggrkERVvfQK26P232GNcHXnJqvoYpH+XBVwF0+d+6ZVSg7YpA9s\nHKF3PoV8ywKBgQC0DP7XXVL+MyC41NPzLUZ1rjA1Shsi/r2nmWyjTvjB0/MG5yDg\nsRGL6JUVg37LQ3GCctkktfLsWwxUcLyp5u8nNg8khFNXj82413tiVptMx20RrVT2\n+IzcIXn78zWfDsT71Z0+6GZ5LfzbS55mU5IJXWRPU9zi9z4F/f7z8ax4ZwKBgQCL\nK0h0W5JSS0gwG2JPxayT7LszWgU9V1lyJ81jtC7DT4ys+ilULwwwsq7Hb8lj20o7\nZJoMAXS0NU+jeDswc9cYO99lONyeTQB12zlw0jW0776xl+aeOs0yZgoP1lBfMZyA\nB0eyEG+1ApSDf4W6tt/IwzMAm/8y3B8RYLN18Ig5xwKBgF7AhradWOMjwzsSMMI+\nHEnxFu+oN8cUo+t01lXxmggYj0MuVMNORtTU0vT7O0Ldv1PUM/3n/QK3yEvGJKOG\nUc4zVUnUeI8My+L6p1PHm8f7vy300JicMNHXGn4MckdvIgYIAqBleOxd4JhWAPc4\nf0bNd8/pCOiMNk3Pi85fy3C/\n-----END PRIVATE KEY-----\n",
+  "client_email": "iamsa-dashboard@dashboard-digital-signage.iam.gserviceaccount.com",
+  "client_id": "116391524607630781558",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/iamsa-dashboard%40dashboard-digital-signage.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
