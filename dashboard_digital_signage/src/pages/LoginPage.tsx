@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () =>{
   const [emailInput, setEmailInput] = useState("")
+  const [errLogin, setErrLogin] = useState("")
   const navigate = useNavigate()
 
   const handlerLogin = (e: FormEvent) =>{
@@ -13,9 +14,13 @@ export const LoginPage = () =>{
 
     if(resp.status === 200){
       const user = resp.data
+
+      sessionStorage.setItem("login", JSON.stringify(user) )
+
       return navigate(`/${user?.area}/dashboard`)
     }else{
-      alert("Usuario no encontrado")
+      const { err } = resp
+      setErrLogin(err ? err : "")
     }
   }
 
@@ -47,6 +52,9 @@ export const LoginPage = () =>{
             placeholder="name@grupo-iamsa.com.mx" 
             onChange={(e) => setEmailInput(e.target.value) }
           />
+        </div>
+        <div className="mt-4 text-red-800">
+          {errLogin}
         </div>
         <button 
           className=" py-2 px-4 bg-red-600 text-white max-w-24 self-end mt-8">
