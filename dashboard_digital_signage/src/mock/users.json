@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "email" : "disenoanimacion@grupo-iamsa.com.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Gerardo Laderos"
+    },
+    {
+      "email" : "diseno2@grupo-iamsa.com.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Sara"
+    },
+    {
+      "email" : "diseno3@grupo-iamsa.com.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Daniela"
+    },
+    {
+      "email" : "diseno4@grupo-iamsa.com.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Jose Trejo"
+    },
+    {
+      "email" : "rvelazquez@grupo-iamsa.com.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Ricardo Velazquez"
+    },
+    {
+      "email" : "diseno@gho.mx",
+      "area" : "designers",
+      "image" : "/img/users/designers",
+      "name" : "Erika Estrada"
+    },
+    {
+      "email" : "cmarquezv@grupo-iamsa.com.mx",
+      "area" : "manager",
+      "image" : "/img/users/manager",
+      "name" : "Carlos Marquez"
+    },
+    {
+      "email" : "webmasteretn@etn.com.mx",
+      "area" : "manager",
+      "image" : "/img/users/manager",
+      "name" : "Mario Ubaldo"
+    },
+    {
+      "email" : "pbianchi@grupo-iamsa.com.mx",
+      "area" : "manager",
+      "image" : "/img/users/manager",
+      "name" : "Pablo bianchi"
+    },
+    {
+      "email" : "webmaster2@gho.mx",
+      "area" : "admin",
+      "image" : "/img/users/admin",
+      "name" : "Jasubi Piñeyro"
+    }
+  ]
+}
