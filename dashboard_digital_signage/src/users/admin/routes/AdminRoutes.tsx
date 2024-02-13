@@ -8,7 +8,7 @@ export const AdminRoutes = () =>{
     <div className="flex h-screen">
       <NavbarAdmin />
 
-      <section className="flex flex-col w-[85%] h-full bg-gray-100">
+      <section className="flex flex-col w-full h-full bg-gray-100">
         <Header />
         <Routes>
           <Route path="/" element={<Navigate to="dashboard" />} />

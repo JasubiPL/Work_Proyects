@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react"
+import { FormEvent, useState } from "react"
 import { login } from "../auth/auth"
 import { useNavigate } from "react-router-dom";
 
@@ -15,7 +15,7 @@ export const LoginPage = () =>{
     if(resp.status === 200){
       const user = resp.data
 
-      sessionStorage.setItem("login", JSON.stringify(user) )
+      localStorage.setItem("login", JSON.stringify(user) )
 
       return navigate(`/${user?.area}/dashboard`)
     }else{
@@ -24,16 +24,13 @@ export const LoginPage = () =>{
     }
   }
 
-  useEffect(() =>{
-    
-  },[])
   return (
     <section className="w-full h-screen bg-gray-100 flex flx-col justify-center items-center">
       <form
         onSubmit={handlerLogin}
         className="w-full max-w-sm lg:max-w-md mx-auto bg-white flex flex-col shadow-xl p-8">
         <div className="w-full flex flex-col items-center mb-8">
-          <img className="w-1/3 self-center" src="/grupo_iamsa_logo.jpg" alt="logo grupo iamsa" />
+          <img className="w-1/3 self-center" src="/img/grupo_iamsa_logo.jpg" alt="logo grupo iamsa" />
           <span className="text-2xl font-semibold text-red-600 ">Señalizacion Digital</span>
         </div>
         <label className="block mb-2 text-xl font-medium text-gray-900 ">Iniciar sesión</label>

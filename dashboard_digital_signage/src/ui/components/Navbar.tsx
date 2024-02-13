@@ -11,16 +11,16 @@ export const Navbar:FC<Props> = ({ children }) =>{
 
   const handlerLogout = () =>{
 
-    sessionStorage.removeItem("login")
+    localStorage.removeItem("login")
     redirect("/login")
   }
 
   return(
-    <nav className="w-[15%] flex flex-col h-screen justify-between border-r-[1px] border-gray-300">
+    <nav className="w-[15%] flex flex-col h-screen justify-between ">
       <section className="flex flex-col ">
-        <div className="flex justify-center items-center gap-2">
-          <img className="w-1/6" src="/logo.png" alt="Logo de app" />
-          <h1 className=" font-semibold text-sm">Señalizacion Digital IAMSA</h1>
+        <div className="flex justify-center items-center gap-2 mt-4">
+          <img className="w-1/6" src="/img/grupo_iamsa_logo.jpg" alt="Logo de app" />
+          <h1 className=" font-semibold text-sm">Señalizacion Digital</h1>
 
         </div>
         { children }
@@ -30,7 +30,7 @@ export const Navbar:FC<Props> = ({ children }) =>{
 
       <button 
         onClick={handlerLogout}
-        className="w-4/5 text-center py-2 mb-6 rounded-md bg-gray-200 self-center hover:bg-red-200 hover:text-red-700 cursor-pointer">
+        className="w-4/5 text-center py-2 mb-6 bg-gray-200 self-center hover:bg-red-600 hover:text-white cursor-pointer">
         Logout
       </button>
 

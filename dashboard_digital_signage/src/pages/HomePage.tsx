@@ -5,7 +5,7 @@ export const HomePage = () =>{
   const redirect = useNavigate()
 
   useEffect(() =>{
-    const loged = sessionStorage.getItem("login")
+    const loged = localStorage.getItem("login")
     
     if(!loged){
       return redirect("/login")
