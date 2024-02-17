@@ -14,5 +14,6 @@ export const AppRouter = () =>{
       <Route path="manager/*" element={<ManagerRoutes />} />
       <Route path="designers/*" element={<DesignersRoutes />} />
     </Routes>
+
   )
 }

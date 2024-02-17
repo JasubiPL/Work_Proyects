@@ -1,4 +1,7 @@
 
+import { useLocation } from "react-router-dom"
+import { UploadFiles } from "./UploadFiles"
+
 
 type User = {
   email: string,
@@ -8,12 +11,14 @@ type User = {
 }
 
 export const Header = () =>{
+  const path = useLocation().pathname
 
   const userData = localStorage.getItem("login")
   const user:User  = JSON.parse(userData!)
 
   return(
-    <header className="py-2 px-6 flex justify-end items-center bg-white ">
+    <header className={`py-2 px-6 flex ${path.includes("admin") ? "justify-between" : "justify-end"} items-center bg-white `}>
+      {path.includes("admin") ? <UploadFiles /> : null}
       <section className="flex items-center gap-3">
         <p className="font-semibold flex flex-col items-end">
           <span>Hola { user.name}</span>
