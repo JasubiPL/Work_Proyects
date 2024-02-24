@@ -38,7 +38,7 @@ export const UploadFilesForm = () =>{
     }
 
     try {
-      const response = await axios.post("http://localhost:7000/api", formData, {
+      const response = await axios.post("http://localhost:7000/api/save-blueprints", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
