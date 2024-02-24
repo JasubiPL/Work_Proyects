@@ -19,7 +19,7 @@ const priceFolder = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       const { company } = req.query
-      cb(null, `src/files/${company}/blueprints`);
+      cb(null, `src/files/${company}/price`);
     },
     filename: function (req, file, cb) {
       const fileName = removeSpaces(file.originalname) 
@@ -32,7 +32,7 @@ const templatesFolder = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
       const { company } = req.query
-      cb(null, `src/files/${company}/blueprints`);
+      cb(null, `src/files/${company}/templates`);
     },
     filename: function (req, file, cb) {
       const fileName = removeSpaces(file.originalname) 
