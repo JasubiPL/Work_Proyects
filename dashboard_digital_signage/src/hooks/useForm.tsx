@@ -1,8 +1,12 @@
 import axios from "axios";
 
+type Categories = {
+  categories: string,
+  company: string
+}
 
-
-export const useForm = async ( file: File | null, category: string) => {
+export const useForm = async ( file: File | null, category: Categories) => {
+  const { categories, company } = category
 
   const formData = new FormData();
   //formData.append("category", fileData.categories);
@@ -11,7 +15,7 @@ export const useForm = async ( file: File | null, category: string) => {
   }
 
   try {
-    const res = await axios.post(`http://localhost:7000/api/save-${category}`, formData, {
+    const res = await axios.post(`http://localhost:7000/api/save-${categories}?company=${company}`, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

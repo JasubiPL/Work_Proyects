@@ -8,13 +8,20 @@ import { Alerts } from "../../../ui/components/Alerts";
 export const UploadFilesForm = () =>{
   //null as File | null
   const { setForm } = useContext(UploadContext)
-  const [category, setCategory] = useState("blueprints")
+  const [category, setCategory] = useState({
+    categories: "blueprints",
+    company: "ETN"
+
+  })
   const [file, setFile] = useState(null as File | null)
   const [uploadResponse, setUploadResponse] = useState(<></>)
 
 
-  const handlerForm = (e:ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>{
-    setCategory(e.target.value)
+  const handlerCategories = (e:ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>{
+    setCategory({
+      ...category,
+      [e.target.name]: e.target.value
+    })
   }
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -74,11 +81,22 @@ export const UploadFilesForm = () =>{
       <div className="w-full grid">
         <label className="text-sm text-red-600" htmlFor="categories">Selecciona la categoria</label>
         <select 
-          onChange={handlerForm}
+          onChange={handlerCategories}
           className=" outline-red-300 border-gray-200 border-2" name="categories">
           <option value="blueprints">Planos</option>
           <option value="templates">Plantillas</option>
           <option value="price">Cotizaciones</option>
+        </select>
+      </div>
+      <div className="w-full grid">
+        <label className="text-sm text-red-600" htmlFor="company">Selecciona la empresa</label>
+        <select 
+          onChange={handlerCategories}
+          className=" outline-red-300 border-gray-200 border-2" name="company">
+          <option value="ETN">ETN</option>
+          <option value="GHO">GHO</option>
+          <option value="Costaline">Costaline</option>
+          <option value="IAMSA">IAMSA</option>
         </select>
       </div>
       <input

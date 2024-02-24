@@ -5,7 +5,8 @@ const removeSpaces = require("./removeSpaces.controller");
 const blueprintsFolder = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, "src/files/blueprints/");
+      const { company } = req.query
+      cb(null, `src/files/${company}/blueprints`);
     },
     filename: function (req, file, cb) {
       const fileName = removeSpaces(file.originalname) 
@@ -17,7 +18,8 @@ const blueprintsFolder = multer({
 const priceFolder = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, "src/files/price/");
+      const { company } = req.query
+      cb(null, `src/files/${company}/blueprints`);
     },
     filename: function (req, file, cb) {
       const fileName = removeSpaces(file.originalname) 
@@ -29,7 +31,8 @@ const priceFolder = multer({
 const templatesFolder = multer({
   storage: multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, "src/files/templates/");
+      const { company } = req.query
+      cb(null, `src/files/${company}/blueprints`);
     },
     filename: function (req, file, cb) {
       const fileName = removeSpaces(file.originalname) 
