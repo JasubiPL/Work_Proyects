@@ -4,35 +4,27 @@ import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import axios from "axios";
 
 export const UploadFilesForm = () =>{
-
+  //null as File | null
   const { setForm } = useContext(UploadContext)
-  const [fileData, setFileData] = useState({
-    fileName:"",
-    categories: "blueprints",
-    document:  null as File | null,
-  })
+  const [category, setCategory] = useState("")
+  const [file, setFile] = useState(null as File | null)
 
 
   const handlerForm = (e:ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>{
-    setFileData({
-      ...fileData,
-      [e.target.name]: e.target.value
-    })
+    setCategory(e.target.value)
   }
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setFileData({
-      ...fileData,
-      document: e.target.files?.[0] || null // Almacenamos el archivo en fileData
-    });
+    setFile(
+      e.target.files?.[0] || null // Almacenamos el archivo en fileData
+    );
   };
 
   const sendForm = async (e: FormEvent) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("fileName", fileData.fileName);
-    formData.append("category", fileData.categories);
+    //formData.append("category", fileData.categories);
     if (fileData.document) {
       formData.append("document", fileData.document);
     }
@@ -59,13 +51,6 @@ export const UploadFilesForm = () =>{
         <span>Datos del Archivo</span>
         <IoCloseSharp className=" cursor-pointer" onClick={() =>setForm(false)}/>
       </div>
-      <input
-        className="w-full border-b-2 border-red-600 outline-none" 
-        type="text"  
-        placeholder="Nombre del archivo"
-        name="fileName"
-        onChange={handlerForm}
-      />
       <div className="w-full grid">
         <label className="text-sm text-red-600" htmlFor="categories">Selecciona la categoria</label>
         <select 
