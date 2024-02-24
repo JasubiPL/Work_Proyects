@@ -22,8 +22,7 @@ saveFiles.post("/save-blueprints", blueprintsFolder.single("document"), (req, re
 
 
   res.json({
-    "message": `Archivo guardado exitosamente en`,
-    "path" : `${savePath}`
+    "message": `Archivo guardado exitosamente`
   })
 })
 
@@ -38,8 +37,7 @@ saveFiles.post("/save-templates", templatesFolder.single("document"), (req, res,
 
 
   res.json({
-    "message": `Archivo guardado exitosamente en`,
-    "path" : `${savePath}`
+    "message": `Archivo guardado exitosamente`
   })
 })
 
@@ -54,8 +52,7 @@ saveFiles.post("/save-price", priceFolder.single("document"), (req, res, next) =
 
 
   res.json({
-    "message": `Archivo guardado exitosamente en`,
-    "path" : `${savePath}`
+    "message": `Archivo guardado exitosamente`
   })
 })
 

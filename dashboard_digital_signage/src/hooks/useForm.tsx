@@ -16,8 +16,8 @@ export const useForm = async ( file: File | null, category: string) => {
         "Content-Type": "multipart/form-data",
       },
     });
-    //console.log("Respuesta del servidor:", res);
-    return await {status: res.status, data: res.data }
+    console.log("Respuesta del servidor:", res.data);
+    return await {status: res.status, message: res.data.message }
   } catch (error) {
     console.error("Error al enviar el formulario:", error);
     return await {status: 400, err: "Error al cargar el archivo, intentelo mas tarde"  }

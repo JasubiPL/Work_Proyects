@@ -2,6 +2,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { UploadContext } from "../../../context/UploadFilesContext";
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import { useForm } from "../../../hooks/useForm";
+import { Alerts } from "../../../ui/components/Alerts";
 
 
 export const UploadFilesForm = () =>{
@@ -9,6 +10,7 @@ export const UploadFilesForm = () =>{
   const { setForm } = useContext(UploadContext)
   const [category, setCategory] = useState("blueprints")
   const [file, setFile] = useState(null as File | null)
+  const [uploadResponse, setUploadResponse] = useState(<></>)
 
 
   const handlerForm = (e:ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>{
@@ -26,9 +28,32 @@ export const UploadFilesForm = () =>{
     const saveFile = await useForm(file, category)
     //console.log(saveFile)
     if(saveFile.status === 200 ){
-      alert(`${saveFile.data.message}: ${saveFile.data.path}`)
+      //alert(`${saveFile.data.message}: ${saveFile.data.path}`)
+      setUploadResponse(
+        <Alerts type="success">
+        <>
+          {saveFile.message}
+        </>
+      </Alerts>
+      )
+
+      
+      setTimeout(() =>{
+        setForm(false)
+      },2000)
+
     }else{
-      alert(saveFile.err)
+      setUploadResponse(
+        <Alerts type="error">
+        <>
+          {saveFile.err}
+        </>
+      </Alerts>
+      )
+
+      setTimeout(() =>{
+        setForm(false)
+      },2000)
     }
 
   }
@@ -37,6 +62,8 @@ export const UploadFilesForm = () =>{
   console.log({category, file})
 
   return(
+    <>
+    { uploadResponse }
     <form
     onSubmit={(e) => sendForm(e)} 
     className="absolute top-[20%] left-[40%] w-96 bg-white shadow-xl p-4 grid gap-4 pop-in">
@@ -63,5 +90,6 @@ export const UploadFilesForm = () =>{
         type="file" />
       <button className="bg-red-600 py-1 px-2 text-white hover:bg-red-400 active:scale-95 transition-all">Subir</button>
     </form>
+    </>
   )
 }
