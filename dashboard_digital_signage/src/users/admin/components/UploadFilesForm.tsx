@@ -1,12 +1,13 @@
 import { IoCloseSharp } from "react-icons/io5";
 import { UploadContext } from "../../../context/UploadFilesContext";
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
-import axios from "axios";
+import { useForm } from "../../../hooks/useForm";
+
 
 export const UploadFilesForm = () =>{
   //null as File | null
   const { setForm } = useContext(UploadContext)
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("blueprints")
   const [file, setFile] = useState(null as File | null)
 
 
@@ -20,28 +21,20 @@ export const UploadFilesForm = () =>{
     );
   };
 
-  const sendForm = async (e: FormEvent) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    //formData.append("category", fileData.categories);
-    if (fileData.document) {
-      formData.append("document", fileData.document);
+  const sendForm = async(e: FormEvent<HTMLFormElement>) =>{
+    e.preventDefault()
+    const saveFile = await useForm(file, category)
+    //console.log(saveFile)
+    if(saveFile.status === 200 ){
+      alert(`${saveFile.data.message}: ${saveFile.data.path}`)
+    }else{
+      alert(saveFile.err)
     }
 
-    try {
-      const response = await axios.post("http://localhost:7000/api/save-blueprints", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      console.log("Respuesta del servidor:", response.data);
-    } catch (error) {
-      console.error("Error al enviar el formulario:", error);
-    }
-  };
+  }
 
-  console.log(fileData)
+  
+  console.log({category, file})
 
   return(
     <form
