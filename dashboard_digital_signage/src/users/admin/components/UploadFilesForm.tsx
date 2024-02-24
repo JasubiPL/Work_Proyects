@@ -1,12 +1,14 @@
 import { IoCloseSharp } from "react-icons/io5";
-import { UploadContext } from "../../../context/UploadFilesContext";
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UploadContext } from "../../../context/UploadFilesContext";
 import { useForm } from "../../../hooks/useForm";
 import { Alerts } from "../../../ui/components/Alerts";
+import { User } from "../../../types/User";
 
 
 export const UploadFilesForm = () =>{
-  //null as File | null
+  const navigate = useNavigate()
   const { setForm } = useContext(UploadContext)
   const [category, setCategory] = useState({
     categories: "blueprints",
@@ -44,10 +46,9 @@ export const UploadFilesForm = () =>{
       </Alerts>
       )
 
-      
       setTimeout(() =>{
-        setForm(false)
-      },2000)
+        location.reload()
+      },1000)
 
     }else{
       setUploadResponse(
@@ -60,7 +61,7 @@ export const UploadFilesForm = () =>{
 
       setTimeout(() =>{
         setForm(false)
-      },2000)
+      },1000)
     }
 
   }

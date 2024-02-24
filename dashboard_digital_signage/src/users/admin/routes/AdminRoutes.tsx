@@ -9,7 +9,7 @@ import { UploadContext, UploadContextType } from "../../../context/UploadFilesCo
 export const AdminRoutes = () =>{
 
   const { form }= useContext<UploadContextType>(UploadContext)
-  console.log(form)
+  //console.log(form)
 
   return(
     <div className="flex h-screen">
