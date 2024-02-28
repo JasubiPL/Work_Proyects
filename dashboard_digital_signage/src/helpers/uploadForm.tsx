@@ -5,7 +5,7 @@ type Categories = {
   company: string
 }
 
-export const useForm = async ( file: File | null, category: Categories) => {
+export const uploadForm = async ( file: File | null, category: Categories) => {
   const { categories, company } = category
 
   const formData = new FormData();

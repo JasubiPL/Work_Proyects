@@ -1,7 +1,7 @@
-import axios from "axios"
-import { RiFileDownloadLine } from "react-icons/ri";
+import { IoCloudDownloadOutline } from "react-icons/io5";
 import { useEffect, useState } from "react"
 import { FileType } from "../ui/components/FileType";
+import { getFiles } from "../helpers/getFiles";
 
 
 interface Doc {
@@ -16,25 +16,20 @@ export const TemplatesPage= () =>{
   const [files, setFiles] = useState<Doc[]>([])
  
   
-
-  const getFiles = async () =>{
-    const res = await axios.get("http://localhost:7000/api/search-templates?company=IAMSA")
-    const data  = await res.data
-    
-    console.log(data)
-    setFiles(data)
-    
+  const readFiles = async () =>{
+    const filesData = await getFiles("templates", "IAMSA")
+    setFiles(filesData)
   }
 
   useEffect(() =>{
-    getFiles()
+    readFiles()
 },[])
 
 
 
   return(
     <section className="w-full  h-full flex flex-col items-center overflow-y-auto mb-8">
-      <section className="w-[90%] py-4 bg-white mt-8 border-b-[1px] border-gray-200">
+      <section className="w-[90%] pt-4 bg-white mt-8 border-b-[1px] border-gray-200">
         <header className="text-center grid grid-cols-files font-semibold border-b-[1px] border-gray-200 pb-1">
           <article>Nombre ▾</article>
           <article>Modificacion ▾</article>
@@ -50,8 +45,8 @@ export const TemplatesPage= () =>{
               </div>
               <div className="text-sm text-center py-3 flex justify-center items-center">{file.modifiedDate}</div>
               <div className="text-sm text-center py-3 flex justify-center items-center">{file.size}</div>
-              <a href={file.filePath} target="__blanck" className="text-2xl flex justify-center items-center text-green-500">
-              <RiFileDownloadLine />
+              <a href={file.filePath} target="__blanck" className="text-2xl flex justify-center items-center text-green-500 hover:scale-110 transition-all">
+              <IoCloudDownloadOutline />
               </a>
             </div>
           ))

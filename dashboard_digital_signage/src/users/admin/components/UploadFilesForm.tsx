@@ -1,14 +1,11 @@
 import { IoCloseSharp } from "react-icons/io5";
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { UploadContext } from "../../../context/UploadFilesContext";
-import { useForm } from "../../../hooks/useForm";
+import { uploadForm } from "../../../helpers/uploadForm";
 import { Alerts } from "../../../ui/components/Alerts";
-import { User } from "../../../types/User";
 
 
 export const UploadFilesForm = () =>{
-  const navigate = useNavigate()
   const { setForm } = useContext(UploadContext)
   const [category, setCategory] = useState({
     categories: "blueprints",
@@ -34,7 +31,7 @@ export const UploadFilesForm = () =>{
 
   const sendForm = async(e: FormEvent<HTMLFormElement>) =>{
     e.preventDefault()
-    const saveFile = await useForm(file, category)
+    const saveFile = await uploadForm(file, category)
     //console.log(saveFile)
     if(saveFile.status === 200 ){
       //alert(`${saveFile.data.message}: ${saveFile.data.path}`)
